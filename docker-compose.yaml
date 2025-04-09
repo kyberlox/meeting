@@ -1,0 +1,36 @@
+version : '3.9'
+
+services:
+  fastapi:
+    build:
+      context: ./code/
+      dockerfile: Dockerfile
+    container_name: fastapi
+    env_file:
+      - .env
+    volumes:
+      - ./code/:/app/
+      - ./code/static/:/app/static/
+    ports:
+      - "8000:8000"
+    networks:
+        - app-network
+
+  nginx:
+    image: nginx:alpine
+    container_name: nginx
+    depends_on:
+      - fastapi
+      #- frontend
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/:/etc/nginx/conf.d/
+    networks:
+      - app-network
+
+
+
+networks:
+  app-network:
+    driver: bridge

@@ -7,6 +7,6 @@ import os
 app = FastAPI()
 app.mount("/public", StaticFiles(directory="public"), name="public")
 
-@app.get("/api", tags=["base link"]):
+@app.get("/api", tags=["base link"])
 def root():
 	return {"status" : "Ok"}

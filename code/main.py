@@ -5,7 +5,7 @@ from fastapi.responses import FileResponse
 import os
 
 app = FastAPI()
-app.mount("/public", StaticFiles(directory="public"), name="public")
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
 @app.get("/api", tags=["base link"])
 def root():

@@ -8,7 +8,7 @@ import os
 app = FastAPI()
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
-@app.get("/", tags=["base link"])
+@app.get("/", tags=["base link"], response_class=HTMLResponse)
 async def root():
     return """
     <html>

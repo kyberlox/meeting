@@ -19,7 +19,7 @@ export default defineConfig({
   },
   server: {
     host: "meeting.mosckba.ru",
-    port: 5173,
+    port: 4173,
   },
   css: {
     preprocessorOptions: {

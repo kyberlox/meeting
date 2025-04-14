@@ -1,4 +1,4 @@
-FROM node:20.17-alpine AS build-stage
+FROM node:23.11-alpine AS build-stage
 # Установить рабочий каталог в контейнере
 WORKDIR /app
 
@@ -16,4 +16,4 @@ RUN npm run build
 
 WORKDIR /app/dist
 
-CMD ["npm", "run", "preview", "--port", "4173"]
+CMD ["npm", "run", "preview"]

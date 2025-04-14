@@ -5,7 +5,7 @@ import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
 import tailwindcss from '@tailwindcss/vite'
 
-const allowedHosts = ['vue','127.0.0.1','meeting.mosckba.ru'];
+const allowedHosts = ['meeting.mosckba.ru'];
 
 
 // https://vite.dev/config/

@@ -1,6 +1,6 @@
 <template>
     <div class="archieve__wrapper"
-         v-if="title">
+         v-if="title && images">
         <div class="w-full max-h-120 h-auto bg-no-repeat bg-cover bg-center rounded-md aspect-16/9 bg-position-[center_top_55%]"
              :style="{ 'background-image': `url(${topPhoto})` }">
         </div>
@@ -40,8 +40,9 @@
                  @click="openModal(i)"
                  :key="i + 'photoIndex'"
                  class="archieve__content-item w-full">
-                <div class="archieve__content-item__video__wrapper relative"
-                     v-if="i?.includes('mp4')">
+                <div @click="console.log(images)"
+                     v-if="i && typeof i == 'string' && i.includes('mp4')"
+                     class="archieve__content-item__video__wrapper relative">
                     <div class="video-container">
                         <video ref="videoPlayer"
                                class="video-js rounded-md vjs-default-skin vjs-big-play-centered"
@@ -118,7 +119,7 @@ export default defineComponent({
         const isPlaying = ref(false);
 
         const openModal = (url: string) => {
-            if (url.includes('mp4')) return;
+            if (!url || url.includes('mp4')) return;
 
             modalOpen.value = true;
             modalImage.value = url;

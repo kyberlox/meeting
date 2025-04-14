@@ -11,7 +11,9 @@
             <div
                  class="text-left text-white p-3 sm:p-4 md:p-6 lg:p-8 text-sm sm:text-xl md:text-3xl lg:text-5xl xl:text-6xl 2xl:text-7xl ml-2 sm:ml-4 md:ml-8 lg:ml-16 xl:ml-24 max-w-full">
                 <span class="font-medium">21-22 АВГУСТА</span>
-                <br /><span class="text-theme-orange font-bold leading-tight">VII МЕЖДУНАРОДНАЯ <br />
+                <br />
+                <span class="text-theme-orange font-bold leading-[105%] sm:leading-[110%]">VII МЕЖДУНАРОДНАЯ
+                    <br />
                     ПРОЕКТНАЯ КОНФЕРЕНЦИЯ <br />
                     ПО ТРУБОПРОВОДНЫМ СИСТЕМАМ <br /></span>
                 <span
@@ -38,12 +40,6 @@ export default defineComponent({
 </script>
 <style lang="scss" scoped>
 .text-theme-orange {
-    line-height: 110%;
-
-    @media (max-width: 640px) {
-        line-height: 105%;
-    }
-
     color: var(--theme-orange);
 }
 </style>

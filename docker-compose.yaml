@@ -36,8 +36,8 @@ services:
     build:
       context: ./front
       dockerfile: Dockerfile
-    #volumes:
-      #- ./front/:/app/
+    volumes:
+      - ./front/:/app/
     ports:
       - 4173:4173
     networks:

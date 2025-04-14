@@ -1,16 +1,13 @@
 export const page = {
     firstImg: '/homeImg.jpg',
     date: '21.08.2025',
-    title: 'Слет проектировщиков',
+    title: 'VII МЕЖДУНАРОДНАЯ ПРОЕКТНАЯ КОНФЕРЕНЦИЯ ПО ТРУБОПРОВОДНЫМ СИСТЕМАМ',
     description: '"Лесники" Г. Курган, п. Усть-Утяк',
     AboutBlocks: [
         {
             id: 1,
             title: 'Цели конференции:',
             text: `<ol class="list-disk pl-6 space-y-4 text-gray-800" style="list-style-type: disc;">
-    <li class="pl-2 leading-relaxed">
-        Обмен передовым опытом между профессионалами отрасли.
-    </li>
     <li class="pl-2 leading-relaxed">
         Выработка практических решений для развития ТЭК, включая разработку и внедрение новых технологических решений, создание отечественных производств оборудования для энергетики.
     </li>
@@ -31,11 +28,11 @@ export const page = {
         },
         {
             id: 2,
-            title: 'Деловая программа и докладчики:',
+            title: 'Сессии и конференции:',
             text:
                 `<ol class="list-disk pl-6 space-y-4 text-gray-800" style="list-style-type: disc;">
 <li class="pl-2 leading-relaxed">
-     «Нефть, газ, переработка и нефтехимия»
+     «Импортозамещение и реинжиниринг»
 </li>
 <li class="pl-2 leading-relaxed">
     «Сервисное обслуживание, оборудование, технологии»
@@ -53,7 +50,7 @@ export const page = {
     «АЭС и тепловая генерация»
 </li>
 <li class="pl-2 leading-relaxed">
-    «Внедрение в серийное производство аналогов лучших образцов продукции иностранного производства и НИОКР»
+    «Передовые технологии и решения в области строительства и эксплуатации энергетических объектов».
 </li>
 </ol>`
         },
@@ -73,9 +70,6 @@ export const page = {
 </li>
 <li class="pl-2 leading-relaxed">
     Посещение производственных площадок КСА, где создается трубопроводная арматура и другое оборудование для атомных станций – уникальная возможность для участников конференции побывать на одном из ведущих предприятий отрасли. КСА является многолетним партнёром «Росатома» и специализируется на производстве как серийного оборудования, так и специализированной арматуры для работы с жидкометаллическими теплоносителями. Завод также предлагает уникальные индивидуальные решения для своих заказчиков.
-</li>
-<li class="pl-2 leading-relaxed">
-   Во время визита гости ознакомятся с производственными процессами, увидят, как создается арматура и оборудование, используемое при строительстве и эксплуатации атомных станций, а также ГРЭС и ТЭС. Таким образом, посещение производственных площадок КСА станет ценным опытом для всех участников конференции, предоставив им возможность глубже понять процессы производства и эксплуатации оборудования для атомной энергетики, а также наладить прямые контакты с ведущими специалистами отрасли.
 </li>
 </ol>`
         },
@@ -97,31 +91,29 @@ export const page = {
 <li class="pl-2 leading-relaxed">
     Нефтегазовой и химической отраслей.
 </li>
-</ol>
-<p class="mt-3">
-На конференции вы сможете ознакомиться с новинками высокотехнологичного оборудования и лично пообщаться с главными конструкторами, проектировщиками и испытателями. Обсудить лучшие практики применения решений в области трубопроводной арматуры, вопросы реальных условий эксплуатации оборудования, возможности увеличения ресурса, создание импортозамещающих продуктов и разработку регулирующей и запорной арматуры.</p>`
+</ol>`
         },
     ],
     galleryPreviewTitle: 'Как это было',
     galleryPreviewPhotos: ['/galleryPreview/1.jpg', '/galleryPreview/2.jpg', '/galleryPreview/3.jpg'],
     archiveTopImg: {
         // высота - 480
-        2018: '/archivePhotos/2018/1.jpg',
-        2019: '/archivePhotos/2019/2.jpg',
-        2022: '/archivePhotos/2022/7.jpg',
-        2023: '/archivePhotos/2023/3.jpg',
-        2024: '/archivePhotos/2024/7.jpg',
+        2018: '/archivePhotos/2018/back.jpg',
+        2019: '/archivePhotos/2019/back.jpg',
+        2022: '/archivePhotos/2022/back.jpg',
+        2023: '/archivePhotos/2023/back.jpg',
+        2024: '/archivePhotos/2024/back.jpg',
     },
     gallery: {
-        2018: ['/archivePhotos/2018/1.jpg', '/archivePhotos/2018/2.jpg', '/archivePhotos/2018/3.jpg', '/archivePhotos/2018/4.jpg', '/archivePhotos/2018/5.jpg', '/archivePhotos/2018/6.jpg', '/archivePhotos/2018/7.jpg', '/archivePhotos/2018/8.jpg'],
+        2018: ['/archivePhotos/2018/1.jpg', '/archivePhotos/2018/2.jpg', '/archivePhotos/2018/3.jpg', '/archivePhotos/2018/4.jpg', '/archivePhotos/2018/5.jpg', '/archivePhotos/2018/6.jpg', '/archivePhotos/2018/7.jpg', '/archivePhotos/2018/8.jpg', '/archivePhotos/2018/9.jpg', '/archivePhotos/2018/10.jpg', '/archivePhotos/2018/11.jpg', '/archivePhotos/2018/12.jpg'],
 
-        2019: ['/archivePhotos/2019/1.jpg', '/archivePhotos/2019/2.jpg', '/archivePhotos/2019/3.jpg', '/archivePhotos/2019/4.jpg', '/archivePhotos/2019/5.jpg', '/archivePhotos/2019/6.jpg', '/archivePhotos/2019/7.jpg', '/archivePhotos/2019/8.jpg', '/archivePhotos/2019/9.jpg'],
+        2019: ['/archivePhotos/2019/1.jpg', '/archivePhotos/2019/2.jpg', '/archivePhotos/2019/3.jpg', '/archivePhotos/2019/4.jpg', '/archivePhotos/2019/5.jpg', '/archivePhotos/2019/6.jpg', '/archivePhotos/2019/7.jpg', '/archivePhotos/2019/8.jpg', '/archivePhotos/2019/9.jpg', '/archivePhotos/2019/10.jpg', '/archivePhotos/2019/11.jpg', '/archivePhotos/2019/12.jpg'],
 
-        2022: ['/archivePhotos/2022/1.jpg', '/archivePhotos/2022/2.jpg', '/archivePhotos/2022/3.jpg', '/archivePhotos/2022/4.jpg', '/archivePhotos/2022/5.jpg', '/archivePhotos/2022/6.jpg', '/archivePhotos/2022/7.jpg', '/archivePhotos/2022/8.jpg', '/archivePhotos/2022/9.jpg', '/archivePhotos/2022/10.jpg', '/archivePhotos/2022/11.jpg'],
+        2022: ['/archivePhotos/2022/1.jpg', '/archivePhotos/2022/2.jpg', '/archivePhotos/2022/3.jpg', '/archivePhotos/2022/4.jpg', '/archivePhotos/2022/5.jpg', '/archivePhotos/2022/6.jpg', '/archivePhotos/2022/7.jpg', '/archivePhotos/2022/8.jpg', '/archivePhotos/2022/9.jpg', '/archivePhotos/2022/10.jpg', '/archivePhotos/2022/11.jpg', '/archivePhotos/2022/12.jpg'],
 
-        2023: ['/archivePhotos/2023/1.jpg', '/archivePhotos/2023/2.jpg', '/archivePhotos/2023/3.jpg', '/archivePhotos/2023/4.jpg', '/archivePhotos/2023/5.jpg', '/archivePhotos/2023/6.jpg', '/archivePhotos/2023/7.jpg', '/archivePhotos/2023/8.jpg', '/archivePhotos/2023/9.jpg'],
+        2023: ['/archivePhotos/2023/1.jpg', '/archivePhotos/2023/2.jpg', '/archivePhotos/2023/3.jpg', '/archivePhotos/2023/4.jpg', '/archivePhotos/2023/5.jpg', '/archivePhotos/2023/6.jpg', '/archivePhotos/2023/7.jpg', '/archivePhotos/2023/8.jpg', '/archivePhotos/2023/9.jpg', '/archivePhotos/2023/10.jpg', '/archivePhotos/2023/11.jpg', '/archivePhotos/2023/12.jpg'],
 
-        2024: ['/archivePhotos/2024/1.jpg', '/archivePhotos/2024/2.jpg', '/archivePhotos/2024/3.jpg', '/archivePhotos/2024/4.jpg', '/archivePhotos/2024/5.jpg', '/archivePhotos/2024/6.jpg', '/archivePhotos/2024/7.jpg', '/archivePhotos/2024/8.jpg', '/archivePhotos/2024/9.jpg', '/archivePhotos/2024/10.jpg', '/archivePhotos/2024/11.jpg'],
+        2024: ['/archivePhotos/2024/1.jpg', '/archivePhotos/2024/2.jpg', '/archivePhotos/2024/3.jpg', '/archivePhotos/2024/4.jpg', '/archivePhotos/2024/5.jpg', '/archivePhotos/2024/6.jpg', '/archivePhotos/2024/7.jpg', '/archivePhotos/2024/8.jpg', '/archivePhotos/2024/9.jpg', '/archivePhotos/2024/10.jpg', '/archivePhotos/2024/11.jpg', '/archivePhotos/2024/12.jpg'],
     },
     partycipants: ['/partycipants/atom.png', '/partycipants/gks.png', '/partycipants/lukoyl.png', '/partycipants/ozna.png', '/partycipants/sibur.png', '/partycipants/slavneft.png'],
     place: '"Лесники"',

@@ -40,8 +40,7 @@
                  @click="openModal(i)"
                  :key="i + 'photoIndex'"
                  class="archieve__content-item w-full">
-                <div @click="console.log(images)"
-                     v-if="i && typeof i == 'string' && i.includes('mp4')"
+                <!-- <div v-if="i && typeof i == 'string' && i.includes('mp4')"
                      class="archieve__content-item__video__wrapper relative">
                     <div class="video-container">
                         <video ref="videoPlayer"
@@ -68,15 +67,15 @@
                     </div>
                     <PlayIcon v-if="!isPlaying"
                               class="play-icon hover:scale-101 pointer-events-none" />
-                </div>
-                <div v-else
-                     @click="openModal(i)"
+                </div> -->
+                <div @click="openModal(i)"
                      class="w-full h-auto bg-no-repeat bg-cover bg-center rounded-md aspect-16/9 transition-all ease-in-out duration-300 hover:scale-105 hover:shadow-lg aspect-16/9"
                      :style="{ 'background-image': `url(${i})` }">
                 </div>
             </div>
         </div>
-        <GalleryModal :modalOpen="modalOpen"
+        <GalleryModal v-if="modalImage"
+                      :modalOpen="modalOpen"
                       :modalImage="modalImage"
                       @closeModal="modalOpen = false" />
 
@@ -85,7 +84,8 @@
 
 
 <script lang="ts">
-import { defineComponent, ref, computed } from "vue";
+import { defineComponent, ref, computed, watch } from "vue";
+import { useRoute } from 'vue-router';
 import PlayIcon from "@/assets/icons/PlayIcon.vue";
 import { page } from "@/assets/data";
 import GalleryModal from '@/components/GalleryModal.vue'
@@ -103,6 +103,7 @@ export default defineComponent({
         }
     },
     setup(props) {
+        const route = useRoute();
         const videoPlayer = ref(null);
         const modalOpen = ref(false);
         const modalImage = ref();
@@ -124,6 +125,12 @@ export default defineComponent({
             modalOpen.value = true;
             modalImage.value = url;
         }
+
+        watch(route, (newRoute) => {
+            if (newRoute) {
+                modalOpen.value = false;
+            }
+        })
 
         const navArchiveOpen = ref(false);
 

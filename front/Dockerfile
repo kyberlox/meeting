@@ -16,4 +16,4 @@ RUN npm run build
 
 WORKDIR /app/dist
 
-CMD ["npm", "run", "preview", "--port", "5173"]
+CMD ["npm", "run", "preview", "--port", "4173"]

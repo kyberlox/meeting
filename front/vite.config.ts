@@ -22,18 +22,18 @@ export default defineConfig({
   },
   server: {
     host: "0.0.0.0",
-    port: 5173,
+    port: 4173,
     strictPort: true, // Fail if port is already in use
     cors: true, // Enable CORS
     hmr: {
       // Try to fix HMR issues in Docker
-      clientPort: 5173,
+      clientPort: 4173,
       host: '0.0.0.0',
     }
   },
   preview: {
     // Also configure preview server
-    port: 5173,
+    port: 4173,
     host: "0.0.0.0"
   },
 

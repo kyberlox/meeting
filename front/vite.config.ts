@@ -27,7 +27,7 @@ export default defineConfig({
     cors: true, // Enable CORS
     hmr: {
       // Try to fix HMR issues in Docker
-      clientPort: 4173,
+      clientPort: 5173,
       host: '0.0.0.0',
     }
   },

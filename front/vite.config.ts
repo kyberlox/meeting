@@ -24,7 +24,9 @@ export default defineConfig({
     host: "0.0.0.0",
     port: 5173,
   },
-
+  preview: {
+    allowedHosts: ['meeting.mosckba.ru']
+  },
   css: {
     preprocessorOptions: {
       scss: {

@@ -117,11 +117,11 @@ export const page = {
 
         2019: ['/archivePhotos/2019/1.jpg', '/archivePhotos/2019/2.jpg', '/archivePhotos/2019/3.jpg', '/archivePhotos/2019/4.jpg', '/archivePhotos/2019/5.jpg', '/archivePhotos/2019/6.jpg', '/archivePhotos/2019/7.jpg', '/archivePhotos/2019/8.jpg', '/archivePhotos/2019/9.jpg'],
 
-        2022: ['/archivePhotos/2022/1.jpg', '/archivePhotos/2022/2.jpg', '/archivePhotos/2022/3.jpg', '/archivePhotos/2022/4.jpg', '/archivePhotos/2022/5.jpg', '/archivePhotos/2022/6.jpg', '/archivePhotos/2022/7.jpg', '/archivePhotos/2022/8.jpg', '/archivePhotos/2022/9.jpg', '/archivePhotos/2022/10.jpg', '/archivePhotos/2022/11.jpg', '/archivePhotos/2022/12.mp4'],
+        2022: ['/archivePhotos/2022/1.jpg', '/archivePhotos/2022/2.jpg', '/archivePhotos/2022/3.jpg', '/archivePhotos/2022/4.jpg', '/archivePhotos/2022/5.jpg', '/archivePhotos/2022/6.jpg', '/archivePhotos/2022/7.jpg', '/archivePhotos/2022/8.jpg', '/archivePhotos/2022/9.jpg', '/archivePhotos/2022/10.jpg', '/archivePhotos/2022/11.jpg'],
 
         2023: ['/archivePhotos/2023/1.jpg', '/archivePhotos/2023/2.jpg', '/archivePhotos/2023/3.jpg', '/archivePhotos/2023/4.jpg', '/archivePhotos/2023/5.jpg', '/archivePhotos/2023/6.jpg', '/archivePhotos/2023/7.jpg', '/archivePhotos/2023/8.jpg', '/archivePhotos/2023/9.jpg'],
 
-        2024: ['/archivePhotos/2024/12.mp4', '/archivePhotos/2024/1.jpg', '/archivePhotos/2024/2.jpg', '/archivePhotos/2024/3.jpg', '/archivePhotos/2024/4.jpg', '/archivePhotos/2024/5.jpg', '/archivePhotos/2024/6.jpg', '/archivePhotos/2024/7.jpg', '/archivePhotos/2024/8.jpg', '/archivePhotos/2024/9.jpg', '/archivePhotos/2024/10.jpg', '/archivePhotos/2024/11.jpg'
+        2024: [, '/archivePhotos/2024/1.jpg', '/archivePhotos/2024/2.jpg', '/archivePhotos/2024/3.jpg', '/archivePhotos/2024/4.jpg', '/archivePhotos/2024/5.jpg', '/archivePhotos/2024/6.jpg', '/archivePhotos/2024/7.jpg', '/archivePhotos/2024/8.jpg', '/archivePhotos/2024/9.jpg', '/archivePhotos/2024/10.jpg', '/archivePhotos/2024/11.jpg'
         ],
     },
     partycipants: ['/partycipants/atom.png', '/partycipants/gks.png', '/partycipants/lukoyl.png', '/partycipants/ozna.png', '/partycipants/sibur.png', '/partycipants/slavneft.png'],

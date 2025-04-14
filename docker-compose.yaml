@@ -30,18 +30,30 @@ services:
       - ./certbot/www:/var/www/certbot
     networks:
       - app-network
-  
-  certbot:
-    image: certbot/certbot
-    depends_on:
-      - nginx
-    container_name: certbot
-    volumes:
-      - ./certbot/conf:/etc/letsencrypt
-      - ./certbot/www:/var/www/certbot
-    command: certonly --webroot --webroot-path=/var/www/certbot/ --email timofeev.a.a@emk.ru --agree-tos --no-eff-email -d meeting.mosckba.ru
+
+  frontend:
+    container_name: vue
+    build:
+      context: ./front
+      dockerfile: Dockerfile
+    #volumes:
+      #- ./front/:/app/
+    ports:
+      - 5173:5173
     networks:
       - app-network
+  
+  # certbot:
+  #   image: certbot/certbot
+  #   depends_on:
+  #     - nginx
+  #   container_name: certbot
+  #   volumes:
+  #     - ./certbot/conf:/etc/letsencrypt
+  #     - ./certbot/www:/var/www/certbot
+  #   command: certonly --webroot --webroot-path=/var/www/certbot/ --email timofeev.a.a@emk.ru --agree-tos --no-eff-email -d meeting.mosckba.ru
+  #   networks:
+  #     - app-network
 
 
 

@@ -22,7 +22,7 @@ export default defineConfig({
   },
   server: {
     host: "0.0.0.0",
-    port: 4173,
+    port: 5173,
     strictPort: true, // Fail if port is already in use
     cors: true, // Enable CORS
     hmr: {
@@ -33,7 +33,7 @@ export default defineConfig({
   },
   preview: {
     // Also configure preview server
-    port: 4173,
+    port: 5173,
     host: "0.0.0.0"
   },
 

@@ -32,42 +32,26 @@
                     </RouterLink>
                 </div>
             </span>
-
         </div>
+
+        <div v-if="featuredVideo"
+             class="featured-video-container mx-auto px-2  max-w-7xl my-10 ">
+            <h3 class="text-2xl font-semibold text-theme-dark mb-4 text-center">Видео с мероприятия</h3>
+            <video-player class="video-player max-w-full vjs-theme-forest video-wrapper cursor-pointer relative rounded-md overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl w-full!"
+                          :src="featuredVideo"
+                          controls
+                          autoplay
+                          playsinline
+                          height="480"
+                          :volume="0.6" />
+        </div>
+
         <div
-             class="archieve__content cursor-pointer mx-auto max-w-7xl gap-5 my-20 grid grid-cols-1 px-2 sm:grid-cols-2 md:grid-cols-3 justify-items-center  row-auto">
+             class="archieve__content cursor-pointer mx-auto max-w-7xl gap-5 mb-20 grid grid-cols-1 px-2 sm:grid-cols-2 md:grid-cols-3 justify-items-center  row-auto">
             <div v-for="(i) in images"
                  @click="openModal(i)"
                  :key="i + 'photoIndex'"
                  class="archieve__content-item w-full">
-                <!-- <div v-if="i && typeof i == 'string' && i.includes('mp4')"
-                     class="archieve__content-item__video__wrapper relative">
-                    <div class="video-container">
-                        <video ref="videoPlayer"
-                               class="video-js rounded-md vjs-default-skin vjs-big-play-centered"
-                               controls
-                               preload="auto"
-                               width="100%"
-                               height="100%"
-                               poster=""
-                               data-setup="{autoplay: true}"
-                               @play="isPlaying = true"
-                               @pause="isPlaying = false"
-                               @ended="isPlaying = false">>
-                            <source :src="i"
-                                    type="video/mp4" />
-                            <p class="vjs-no-js">
-                                Для просмотра видео включите JavaScript и обновите браузер до
-                                <a href="https://videojs.com/html5-video-support/"
-                                   target="_blank">
-                                    поддерживающего HTML5 видео
-                                </a>
-                            </p>
-                        </video>
-                    </div>
-                    <PlayIcon v-if="!isPlaying"
-                              class="play-icon hover:scale-101 pointer-events-none" />
-                </div> -->
                 <div @click="openModal(i)"
                      class="w-full h-auto bg-no-repeat bg-cover bg-center rounded-md aspect-16/9 transition-all ease-in-out duration-300 hover:scale-105 hover:shadow-lg aspect-16/9"
                      :style="{ 'background-image': `url(${i})` }">
@@ -86,14 +70,12 @@
 <script lang="ts">
 import { defineComponent, ref, computed, watch } from "vue";
 import { useRoute } from 'vue-router';
-import PlayIcon from "@/assets/icons/PlayIcon.vue";
 import { page } from "@/assets/data";
 import GalleryModal from '@/components/GalleryModal.vue'
 
 export default defineComponent({
     name: 'ArchieveView',
     components: {
-        PlayIcon,
         GalleryModal
     },
     props: {
@@ -134,6 +116,12 @@ export default defineComponent({
 
         const navArchiveOpen = ref(false);
 
+        const featuredVideo = computed(() => {
+            const key = props.title as unknown as keyof typeof page.archiveTopVideo;
+            return page.archiveTopVideo[key];
+        }
+        )
+
         return {
             videoPlayer,
             isPlaying,
@@ -143,27 +131,33 @@ export default defineComponent({
             modalOpen,
             modalImage,
             navArchive: Object.keys(page.archiveTopImg),
-            navArchiveOpen
+            navArchiveOpen,
+            featuredVideo
         }
     }
 })
 </script>
 
 <style lang="scss" scoped>
-.playBtn {
-    width: 30%;
-    height: 30%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
-}
-
 .video-container:hover {
     .play-icon {
         transform: scale(1.01);
         display: none;
+    }
+}
+
+.featured-video-container {
+    .video-wrapper {
+        position: relative;
+        transition: all 0.3s ease;
+
+        &:hover {
+            transform: scale(1.01);
+        }
+    }
+
+    .play-icon {
+        cursor: pointer;
     }
 }
 

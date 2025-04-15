@@ -1,5 +1,7 @@
 import './assets/main.css'
 import "tailwindcss";
+import VueVideoPlayer from '@videojs-player/vue'
+import 'video.js/dist/video-js.css'
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
@@ -12,7 +14,9 @@ import router from './router'
 const app = createApp(App)
 
 app.use(createPinia())
-app.use(router).use(createYmaps({
+  .use(VueVideoPlayer)
+  .use(router)
+  .use(createYmaps({
     apikey: '3f8f0af1-723b-47db-b868-be798083bba6',
   }));
 

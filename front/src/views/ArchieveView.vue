@@ -36,7 +36,7 @@
 
         <div v-if="featuredVideo"
              class="featured-video-container mx-auto px-2  max-w-7xl my-10 ">
-            <h3 class="text-2xl font-semibold text-theme-dark mb-4 text-center">Видео с мероприятия</h3>
+            <!-- <h3 class="text-2xl font-semibold text-theme-dark mb-4 text-center">Видео с мероприятия</h3> -->
             <video-player class="video-player max-w-full vjs-theme-forest video-wrapper cursor-pointer relative rounded-md overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl w-full!"
                           :src="featuredVideo"
                           controls

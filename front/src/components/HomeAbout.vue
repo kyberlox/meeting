@@ -12,7 +12,7 @@
             </div>
             <div
                  class="first-row__description text-center text-theme-grey-blue text-base sm:text-lg md:text-xl mb-4 sm:mb-6 md:mb-8">
-                {{ place }}
+                {{ pageDescription }}
             </div>
 
             <div
@@ -44,7 +44,7 @@ export default defineComponent({
 
             pageTitle: page.title,
             pageDate: page.date,
-            place: page.address,
+            pageDescription: page.description,
             blocks: page.AboutBlocks
         }
     }

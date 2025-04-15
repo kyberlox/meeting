@@ -32,17 +32,17 @@ services:
     networks:
       - app-network
 
-  frontend:
-    container_name: vue
-    build:
-      context: ./front
-      dockerfile: Dockerfile
-    #volumes:
-      #- ./front/:/app/
-    ports:
-      - 4173:4173
-    networks:
-      - app-network
+  # frontend:
+  #   container_name: vue
+  #   build:
+  #     context: ./front
+  #     dockerfile: Dockerfile
+  #   #volumes:
+  #     #- ./front/:/app/
+  #   ports:
+  #     - 4173:4173
+  #   networks:
+  #     - app-network
   
   certbot:
     image: certbot/certbot

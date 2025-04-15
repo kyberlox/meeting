@@ -1,11 +1,11 @@
 <template>
-    <!-- Yandex.Metrika counter -->
-    <div><img src="https://mc.yandex.ru/watch/101076346"
+    <div>
+        <img src="https://mc.yandex.ru/watch/101076346"
              style="position:absolute; left:-9999px;"
-             alt="" /></div>
-    <!-- /Yandex.Metrika counter -->
+             alt="" />
+    </div>
 </template>
-<script type="text/javascript">
+<script setup>
 (function (m, e, t, r, i, k, a) {
     m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
     m[i].l = 1 * new Date();

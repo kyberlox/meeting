@@ -31,7 +31,7 @@ export const page = {
         },
         {
             id: 2,
-            title: 'Сессии и конференции:',
+            title: 'Сессии конференции:',
             text:
                 `<ol class="list-disk pl-6 space-y-4 text-gray-800" style="list-style-type: disc;">
 <li class="pl-2 leading-relaxed">
@@ -59,7 +59,7 @@ export const page = {
         },
         {
             id: 3,
-            title: 'Ключевые мероприятия и программы:',
+            title: 'Ключевые мероприятия программы:',
             text:
                 `<ol class="list-disk pl-6 space-y-4 text-gray-800" style="list-style-type: disc;">
 <li class="pl-2 leading-relaxed">
@@ -144,7 +144,7 @@ export const page = {
 
         2024: ['/archivePhotos/2024/1.jpg', '/archivePhotos/2024/2.jpg', '/archivePhotos/2024/3.jpg', '/archivePhotos/2024/4.jpg', '/archivePhotos/2024/5.jpg', '/archivePhotos/2024/6.jpg', '/archivePhotos/2024/7.jpg', '/archivePhotos/2024/8.jpg', '/archivePhotos/2024/9.jpg', '/archivePhotos/2024/10.jpg', '/archivePhotos/2024/11.jpg', '/archivePhotos/2024/12.jpg'],
     },
-    partycipants: ['/partycipants/atom.png', '/partycipants/gks.png', '/partycipants/lukoyl.png', '/partycipants/ozna.png', '/partycipants/sibur.png', '/partycipants/slavneft.png'],
+    partycipants: ['/partycipants/atom.png', '/partycipants/gks.png', '/partycipants/lukoyl.png', '/partycipants/ozna.png', '/partycipants/sibur.png', '/partycipants/slavneft.png', '/partycipants/gazprom.jpg', '/partycipants/gazpr.png', '/partycipants/mmk.png', '/partycipants/mchl.png'],
     place: '"Лесники"',
     address: 'Город Курган, п. Усть-Утяк',
     street: 'Курортная ул., 1, посёлок сельского типа Усть-Утяк',

@@ -5,7 +5,7 @@
             Участники
         </div>
         <div
-             class="partycipants-preview mt-6 sm:mt-8 md:mt-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2 sm:gap-3 md:gap-4">
+             class="partycipants-preview mt-6 sm:mt-8 md:mt-10 grid gap-4 grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-auto gap-2 sm:gap-3 md:gap-4">
             <div class="partycipants-preview__item m-auto"
                  v-for="(item, index) in galleryItems"
                  :key="index + 'slide'">

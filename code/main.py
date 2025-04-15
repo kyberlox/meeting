@@ -3,11 +3,13 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 from fastapi.responses import HTMLResponse
 from fastapi.responses import StreamingResponse
+from fastapi.staticfiles import StaticFiles
 
 import os
 
 app = FastAPI()
-app.mount("/static", StaticFiles(directory="static"), name="static")
+
+app.mount("/api/static", StaticFiles(directory="static"))
 
 @app.get("/api/", tags=["base link"], response_class=HTMLResponse)
 async def root():
@@ -28,3 +30,10 @@ async def stream_video(name : str):
     file_like  = open(path, mode="rb")
 
     return StreamingResponse(file_like, media_type="video/mp4")
+
+# @app.get("/api/static_video/{name}", tags=["video"])
+# async def stream_video(name : str):
+#     path = f"/app/static/{name}"
+#     file_like  = open(path, mode="rb")
+
+#     return StreamingResponse(file_like, media_type="video/mp4")

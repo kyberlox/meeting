@@ -21,7 +21,7 @@ services:
     container_name: nginx
     depends_on:
       - fastapi
-      #- frontend
+      - frontend
     ports:
       - "80:80"
       - "443:443"

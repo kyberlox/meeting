@@ -27,6 +27,7 @@ export default defineConfig({
   preview: {
     allowedHosts: ['meeting.mosckba.ru']
   },
+
   css: {
     preprocessorOptions: {
       scss: {

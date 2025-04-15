@@ -62,10 +62,8 @@
                       :modalOpen="modalOpen"
                       :modalImage="modalImage"
                       @closeModal="modalOpen = false" />
-
     </div>
 </template>
-
 
 <script lang="ts">
 import { defineComponent, ref, computed, watch } from "vue";
@@ -146,21 +144,6 @@ export default defineComponent({
     }
 }
 
-.featured-video-container {
-    .video-wrapper {
-        position: relative;
-        transition: all 0.3s ease;
-
-        &:hover {
-            transform: scale(1.01);
-        }
-    }
-
-    .play-icon {
-        cursor: pointer;
-    }
-}
-
 .text-theme-orange {
     color: var(--theme-orange);
     transition: color 0.3s ease;
@@ -184,5 +167,45 @@ export default defineComponent({
 
 .animate-dropdown {
     animation: dropdown 0.2s ease-out forwards;
+}
+
+.featured-video-container {
+    .video-wrapper {
+        position: relative;
+        transition: all 0.3s ease;
+
+        &:hover {
+            transform: scale(1.01);
+        }
+
+        &:hover {
+            transform: scale(1.01);
+
+            :deep(.vjs-big-play-button) {
+                background-color: var(--theme-orange, var(--theme-orange));
+            }
+        }
+
+        :deep(.vjs-big-play-button) {
+            top: 50% !important;
+            left: 50% !important;
+            transform: translate(-50%, -50%) !important;
+            margin: 0 !important;
+            border: 2px solid white;
+            background-color: rgba(43, 51, 63, 0.7);
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
+
+            &:before {
+                font-size: 40px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-40%, -50%);
+                position: absolute;
+            }
+        }
+    }
 }
 </style>

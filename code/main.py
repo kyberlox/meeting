@@ -2,6 +2,7 @@ from fastapi import FastAPI, Response
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 from fastapi.responses import HTMLResponse
+from fastapi.responses import StreamingResponse
 
 import os
 
@@ -20,3 +21,10 @@ async def root():
         </body>
     </html>
     """
+
+@app.get("/api/video/{name}", tags=["video"])
+async def stream_video(name : str):
+    path = "./static/{name}"
+    file_like  = open(path, mode="rb")
+    
+    return StreamingResponse(iterfile(), media_type="video/mp4")

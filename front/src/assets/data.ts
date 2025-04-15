@@ -107,9 +107,9 @@ export const page = {
     archiveTopVideo: {
         // 2018: '/',
         // 2019: '/',
-        2022: '/api/video/2022.mp4',
+        2022: '/api/static/2022.mp4',
         // 2023: '/',
-        2024: '/api/video/2024.mp4',
+        2024: '/api/static/2024.mp4',
     },
     gallery: {
         2018: ['/archivePhotos/2018/1.jpg', '/archivePhotos/2018/2.jpg', '/archivePhotos/2018/3.jpg', '/archivePhotos/2018/4.jpg', '/archivePhotos/2018/5.jpg', '/archivePhotos/2018/6.jpg', '/archivePhotos/2018/7.jpg', '/archivePhotos/2018/8.jpg', '/archivePhotos/2018/9.jpg', '/archivePhotos/2018/10.jpg', '/archivePhotos/2018/11.jpg', '/archivePhotos/2018/12.jpg'],

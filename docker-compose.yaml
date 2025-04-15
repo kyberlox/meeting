@@ -52,7 +52,7 @@ services:
     volumes:
       - ./certbot/conf:/etc/letsencrypt
       - ./certbot/www:/var/www/certbot
-    command: certonly --webroot --webroot-path=/var/www/certbot/ --email aleks.timofeev.00@mail.ru --agree-tos --no-eff-email -d meeting.mosckba.ru
+    command: certonly --webroot --webroot-path=/var/www/certbot/ --email timofeev.a.a@emk.ru --agree-tos --no-eff-email -d meeting.mosckba.ru
     networks:
       - app-network
 

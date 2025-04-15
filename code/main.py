@@ -27,4 +27,4 @@ async def stream_video(name : str):
     path = f"/app/static/{name}"
     file_like  = open(path, mode="rb")
 
-    return StreamingResponse(iterfile(), media_type="video/mp4")
+    return StreamingResponse(file_like, media_type="video/mp4")

@@ -11,6 +11,7 @@
                               controls
                               autoplay
                               playsinline
+                              :poster="galleryPreviewVideoPoster"
                               :height=videoHeight
                               :volume="0.6" />
             </div>
@@ -29,6 +30,7 @@ export default defineComponent({
             featuredVideo: page.galleryPreviewVideo,
             galleryTitle: page.galleryPreviewTitle,
             videoHeight: 550,
+            galleryPreviewVideoPoster: page.galleryPreviewVideoPoster,
         }
     }
 })

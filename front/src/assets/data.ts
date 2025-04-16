@@ -118,6 +118,7 @@ export const page = {
     ],
     galleryPreviewTitle: 'Как это было',
     galleryPreviewVideo: '/api/static/2024.mp4',
+    galleryPreviewVideoPoster: '/galleryPreview/poster.jpg',
     galleryPreviewPhotos: ['/galleryPreview/1.jpg', '/galleryPreview/2.jpg', '/galleryPreview/3.jpg'],
     archiveTopImg: {
         // высота - 480

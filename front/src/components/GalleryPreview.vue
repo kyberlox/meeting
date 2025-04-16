@@ -39,7 +39,7 @@ export default defineComponent({
 
     setup() {
         const router = useRouter();
-        const goToGallery = (year) => {
+        const goToGallery = (year: string) => {
             router.push(`/archive/${year}`).then(() => {
                 window.scrollTo(0, 0);
             });

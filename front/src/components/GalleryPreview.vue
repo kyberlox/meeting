@@ -1,9 +1,9 @@
 <template>
     <div class="printed-container">
-        <div class="gallery-preview__wrapper p-2 max-w-7xl printed-container mx-auto">
-            <div class="gallery-preview__title text-2xl mt-10 text-center font-bold text-theme-black mb-4">{{
+        <div class="gallery-preview__wrapper  mb-10 p-2 max-w-7xl printed-container mx-auto">
+            <!-- <div class="gallery-preview__title text-2xl mt-10 text-center font-bold text-theme-black mb-4">{{
                 galleryTitle
-            }}</div>
+            }}</div> -->
             <div class="gallery-preview mt-10 grid grid-cols-3 gap-4">
                 <div class="gallery-preview__item"
                      v-for="(item, index) in galleryItems"
@@ -39,9 +39,10 @@ export default defineComponent({
             });
         }
         return {
-            galleryTitle: page.galleryPreviewTitle,
+            // galleryTitle: page.galleryPreviewTitle,
             galleryItems: page.galleryPreviewPhotos,
-            goToGallery
+            goToGallery,
+            featuredVideo: page.galleryPreviewVideo
         }
     }
 })

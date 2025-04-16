@@ -4,7 +4,7 @@
   <main>
     <RouterView :scrollTarget=scrollTarget />
   </main>
-  <!-- <YandexMetrika /> -->
+  <YandexMetrika />
   <FooterV />
 </template>
 
@@ -13,12 +13,12 @@ import HeaderMos from "@/components/LayoutHeader.vue";
 import FooterV from "@/components/LayoutFooter.vue";
 import { defineComponent, ref } from 'vue';
 import { useRoute, useRouter } from "vue-router";
-// import YandexMetrika from "@/components/YandexMetrika.vue";
+import YandexMetrika from "@/components/YandexMetrika.vue";
 export default defineComponent({
   components: {
     HeaderMos,
     FooterV,
-    // YandexMetrika
+    YandexMetrika
   },
   setup() {
     const route = useRoute();

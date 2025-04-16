@@ -4,6 +4,8 @@
         <div class="w-full max-h-120 h-auto bg-no-repeat bg-cover bg-center rounded-md aspect-16/9 bg-position-[center_top_55%]"
              :style="{ 'background-image': `url(${topPhoto})` }">
         </div>
+        <h1 class="sr-only">Галерея: {{ title }}</h1>
+
         <div @click="navArchiveOpen = !navArchiveOpen"
              class="archieve__title text-4xl mt-20 text-center font-bold text-theme-dark mb-4 flex flex-row gap-2 justify-center items-center content-center">
             Как это было в <span
@@ -34,20 +36,8 @@
             </span>
         </div>
 
-        <div v-if="featuredVideo"
-             class="featured-video-container mx-auto px-2  max-w-7xl my-10 ">
-            <!-- <h3 class="text-2xl font-semibold text-theme-dark mb-4 text-center">Видео с мероприятия</h3> -->
-            <video-player class="video-player max-w-full vjs-theme-forest video-wrapper cursor-pointer relative rounded-md overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl w-full!"
-                          :src="featuredVideo"
-                          controls
-                          autoplay
-                          playsinline
-                          height="480"
-                          :volume="0.6" />
-        </div>
-
-        <div
-             class="archieve__content cursor-pointer mx-auto max-w-7xl gap-5 mb-20 grid grid-cols-1 px-2 sm:grid-cols-2 md:grid-cols-3 justify-items-center  row-auto">
+        <section
+                 class="archieve__content cursor-pointer mx-auto max-w-7xl gap-5 mb-20 grid grid-cols-1 px-2 sm:grid-cols-2 md:grid-cols-3 justify-items-center  row-auto">
             <div v-for="(i) in images"
                  @click="openModal(i)"
                  :key="i + 'photoIndex'"
@@ -57,7 +47,7 @@
                      :style="{ 'background-image': `url(${i})` }">
                 </div>
             </div>
-        </div>
+        </section>
         <GalleryModal v-if="modalImage"
                       :modalOpen="modalOpen"
                       :modalImage="modalImage"
@@ -66,13 +56,15 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, computed, watch } from "vue";
+import { defineComponent, ref, computed, watch, onMounted } from "vue";
 import { useRoute } from 'vue-router';
 import { page } from "@/assets/data";
 import GalleryModal from '@/components/GalleryModal.vue'
+import { setSeo } from '@/utils/setSeo'
+import { useSeoMeta } from '@unhead/vue'
 
 export default defineComponent({
-    name: 'ArchieveView',
+    name: 'GalleryView',
     components: {
         GalleryModal
     },
@@ -83,14 +75,19 @@ export default defineComponent({
         }
     },
     setup(props) {
+
         const route = useRoute();
-        const videoPlayer = ref(null);
         const modalOpen = ref(false);
         const modalImage = ref();
-
         const topPhoto = computed(() => {
             const key = props.title as unknown as keyof typeof page.archiveTopImg;
             return page.archiveTopImg[key];
+        })
+
+        onMounted(() => {
+            const metaTitle = computed(() => `Галерея | Слет проектировщиков`);
+            const metaDescription = computed(() => `Фотографии с прошедших мероприятий | Слет проектировщиков`);
+            setSeo(metaTitle.value, metaDescription.value, 'gallery', topPhoto.value)
         })
 
         const images = computed(() => {
@@ -106,23 +103,16 @@ export default defineComponent({
             modalImage.value = url;
         }
 
-        watch(route, (newRoute) => {
+
+        watch(() => route, (newRoute) => {
             if (newRoute) {
                 modalOpen.value = false;
             }
-        })
+        }, { deep: true });
 
         const navArchiveOpen = ref(false);
 
-        const featuredVideo = computed(() => {
-            const key = props.title as unknown as keyof typeof page.archiveTopVideo;
-            return page.archiveTopVideo[key];
-        }
-        )
-
         return {
-            videoPlayer,
-            isPlaying,
             images,
             topPhoto,
             openModal,
@@ -130,20 +120,12 @@ export default defineComponent({
             modalImage,
             navArchive: Object.keys(page.archiveTopImg),
             navArchiveOpen,
-            featuredVideo
         }
     }
 })
 </script>
 
 <style lang="scss" scoped>
-.video-container:hover {
-    .play-icon {
-        transform: scale(1.01);
-        display: none;
-    }
-}
-
 .text-theme-orange {
     color: var(--theme-orange);
     transition: color 0.3s ease;
@@ -169,43 +151,10 @@ export default defineComponent({
     animation: dropdown 0.2s ease-out forwards;
 }
 
-.featured-video-container {
-    .video-wrapper {
-        position: relative;
-        transition: all 0.3s ease;
-
-        &:hover {
-            transform: scale(1.01);
-        }
-
-        &:hover {
-            transform: scale(1.01);
-
-            :deep(.vjs-big-play-button) {
-                background-color: var(--theme-orange, var(--theme-orange));
-            }
-        }
-
-        :deep(.vjs-big-play-button) {
-            top: 50% !important;
-            left: 50% !important;
-            transform: translate(-50%, -50%) !important;
-            margin: 0 !important;
-            border: 2px solid white;
-            background-color: rgba(43, 51, 63, 0.7);
-            border-radius: 50%;
-            width: 80px;
-            height: 80px;
-            line-height: 80px;
-
-            &:before {
-                font-size: 40px;
-                top: 50%;
-                left: 50%;
-                transform: translate(-40%, -50%);
-                position: absolute;
-            }
-        }
+.video-container:hover {
+    .play-icon {
+        transform: scale(1.01);
+        display: none;
     }
 }
 </style>

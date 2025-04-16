@@ -17,7 +17,7 @@
 
             <div
                  class="first-row__about-blocks grid mt-8 sm:mt-12 md:mt-20 items-center grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-                <div v-for="block in blocks"
+                <div v-for="(block, index) in blocks"
                      :key="'aboutBlock' + block.id"
                      class="first-row__about-blocks__block h-full bg-gray-50 max-w-full p-3 sm:p-4 md:p-5 rounded-md border-theme-blue-light shadow-md transition-shadow duration-300">
                     <h2

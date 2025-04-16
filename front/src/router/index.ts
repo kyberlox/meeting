@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import ArchieveView from '@/views/ArchieveView.vue'
+import GalleryView from '@/views/GalleryView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -13,7 +13,7 @@ const router = createRouter({
     {
       path: '/archive/:title',
       name: 'archive',
-      component: ArchieveView,
+      component: GalleryView,
       props: (route) => ({ title: route.params.title }),
     }
   ],

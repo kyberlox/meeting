@@ -1,7 +1,7 @@
 <template>
   <DownHeaderPhoto />
   <AboutInfo />
-  <HomeMainVideo />
+  <!-- <HomeMainVideo /> -->
   <GalleryPreview />
   <Partycipants ref=participants />
   <PlaceYMap />
@@ -16,9 +16,8 @@ import PlaceYMap from "@/components/HomeYMap.vue";
 import Contacts from "@/components/HomeContacts.vue";
 import DownHeaderPhoto from '@/components/HomeMainPhoto.vue';
 import Partycipants from '@/components/HomePartycipants.vue';
-import HomeMainVideo from '@/components/HomeMainVideo.vue';
+// import HomeMainVideo from '@/components/HomeMainVideo.vue';
 import { setSeo } from '@/utils/setSeo'
-import { useSeoMeta } from '@unhead/vue'
 
 export default defineComponent({
   components: {
@@ -28,7 +27,7 @@ export default defineComponent({
     Contacts,
     DownHeaderPhoto,
     Partycipants,
-    HomeMainVideo
+    // HomeMainVideo
   },
   props: {
     scrollTarget: {

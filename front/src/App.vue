@@ -26,8 +26,6 @@ export default defineComponent({
     const scrollTarget = ref(<null | string>null);
 
     const handleScroll = (section: string) => {
-      console.log(route.name);
-      console.log(section);
 
       if ((section == 'participants' || section == 'contacts') && route.name !== 'home') {
         router.push({ name: 'home' }).then(() => {

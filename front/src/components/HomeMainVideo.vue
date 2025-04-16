@@ -1,9 +1,9 @@
 <template>
     <div class="printed-container">
         <div class="gallery-preview__wrapper p-2 max-w-7xl printed-container mx-auto">
-            <div class="gallery-preview__title text-2xl mt-10 text-center font-bold text-theme-blue-dark mb-4">
+            <h3 class="gallery-preview__title text-3xl mt-10 text-center font-bold text-theme-blue-dark mb-4">
                 {{ galleryTitle }}
-            </div>
+            </h3>
             <div v-if="featuredVideo"
                  class="featured-video-container mx-auto px-2  max-w-7xl  ">
                 <video-player class="video-player max-w-full vjs-theme-forest video-wrapper cursor-pointer relative rounded-md overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl w-full!"

@@ -1,6 +1,6 @@
 <template>
     <div class="printed-container">
-        <div class="gallery-preview__wrapper  mb-10 p-2 max-w-7xl printed-container mx-auto">
+        <div class="gallery-preview__wrapper mb-10 p-2 max-w-7xl printed-container mx-auto">
             <!-- <div class="gallery-preview__title text-2xl mt-10 text-center font-bold text-theme-black mb-4">{{
                 galleryTitle
             }}</div> -->
@@ -14,13 +14,19 @@
                     </div>
                 </div>
             </div>
-            <div class="gallery-preview__button text-center -mt-5">
-                <button @click="goToGallery"
-                        class="btn-primary bg-theme-blue-dark text-black font-medium py-2 px-4 rounded-md transition-colors
-                    duration-300 text-xl shadow-sm hover:shadow-md">Посмотреть
-                    все</button>
-
+            <!--  -->
+            <div class="gallery-years mt-8">
+                <h3 class="text-2xl font-bold text-center text-theme-blue-dark mb-4">Архив событий за</h3>
+                <div class="gallery-years__links flex justify-center flex-wrap gap-4">
+                    <button v-for="year in galleryYears"
+                            :key="year"
+                            @click="goToGallery(year)"
+                            class="btn-year cursor-pointer duration-300 text-xl shadow-sm hover:shadow-md py-2 px-6 rounded-md transition-colors bg-theme-blue-dark text-white duration-300 shadow-sm hover:shadow-md">
+                        {{ year }}
+                    </button>
+                </div>
             </div>
+            <!--  -->
         </div>
     </div>
 </template>
@@ -33,8 +39,8 @@ export default defineComponent({
 
     setup() {
         const router = useRouter();
-        const goToGallery = () => {
-            router.push('/archive/2024').then(() => {
+        const goToGallery = (year) => {
+            router.push(`/archive/${year}`).then(() => {
                 window.scrollTo(0, 0);
             });
         }
@@ -42,14 +48,15 @@ export default defineComponent({
             // galleryTitle: page.galleryPreviewTitle,
             galleryItems: page.galleryPreviewPhotos,
             goToGallery,
-            featuredVideo: page.galleryPreviewVideo
+            featuredVideo: page.galleryPreviewVideo,
+            galleryYears: Object.keys(page.archiveTopImg)
         }
     }
 })
 </script>
 
 <style lang="scss">
-.btn-primary {
+.btn-year {
     background: var(--theme-blue-dark);
     cursor: pointer;
     color: white;

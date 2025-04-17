@@ -99,7 +99,7 @@ async def send_message(data=Body()):
     <html>
     <body>
         <table>
-            <tr><th>ФИО</th><th></th><strong>{fio}</strong></tr>
+            <tr><td>ФИО</th><td></td><strong>{fio}</strong></td></tr>
             <tr><td>Телефон</td><td><strong>{phone}</strong></td></tr>
             <tr><td>email</td><td><strong>{email}</strong></td></tr>
             <tr><td>Организация</td><td><strong>{organization}</strong></td></tr>

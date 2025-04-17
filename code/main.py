@@ -18,8 +18,8 @@ def add_form_action(data):
     file = open("./static/form_action.json", "r")
     file_content = json.load(file)
     file.close()
+
     file = open("./static/form_action.json", "w")
-    print(dict(data))
     file_content["data"].append(dict(data))
     json.dump(file_content, file, indent=4)
     file.close()
@@ -87,15 +87,22 @@ async def stream_video(name : str):
 
 @app.post("/api/send_form", tags=["send_message"])
 async def send_message(data=Body()):
-    #Сохранить для статистики
-    add_form_action(data)
-
     #Распаковать данные из json
     fio = data["fio"]
     phone = data["phone"]
     email = data["email"]
     organization = data["organization"]
     report = "С докладом" if data["report"] else "Без доклада"
+
+    #Сохранить для статистики
+    jsn = {
+        "fio" : fio,
+        "phone" : phone,
+        "email" : email,
+        "organization" : organization,
+        "report" : report
+    }
+    add_form_action(jsn)
 
     #Собрать HTML
     html_content = f"""

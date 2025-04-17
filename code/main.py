@@ -109,102 +109,93 @@ async def send_message(data=Body()):
     #Собрать HTML
     html_content = f"""
     <html>
-    <body>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333333;
-            background-color: #f5f5f5;
-            margin: 0;
-            padding: 0;
-            font-size: 10pt;
-        }
-        .container {
-            max-width: 600px;
-            margin: 20px auto;
-            background-color: #ffffff;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .header {
-            background-color: #1e3a8a;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        .header h2 {
-            margin: 0;
-            font-size: 16px;
-        }
-        .content {
-            padding: 30px;
-        }
-        .field {
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid #eeeeee;
-        }
-        .field-label {
-            font-weight: bold;
-            color: #666666;
-            margin-bottom: 5px;
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        .field-value {
-            font-size: 18px;
-            color: #333333;
-        }
-        .footer {
-            background-color: #f9f9f9;
-            padding: 15px;
-            text-align: center;
-            font-size: 12px;
-            color: #777777;
-            border-top: 1px solid #eeeeee;
-        }
-        .footer p {
-            margin: 5px 0;
-        }
-    </style>
-    <div class="container">
-    <div class="header">
-    <h2>Обратная связь | https://meeting.mosckba.ru/</h2>
-    </div>
-    <div class="content">
-    <div class="field">
-    <div class="field-label">ФИО</div>
-    <div class="field-value">{fio}</div>
-    </div>
-    <div class="field">
-    <div class="field-label">Телефон</div>
-    <div class="field-value">{phone}</div>
-    </div>
-    <div class="field">
-    <div class="field-label">Email</div>
-    <div class="field-value">{email}</div>
-    </div>
-    <div class="field">
-    <div class="field-label">Организация</div>
-    <div class="field-value">{organization}</div>
-    </div>
-    <div class="field">
-    <div class="field-label">Участие с докладом</div>
-    <div class="field-value">{report}</div>
-    </div>
-    <div class="field">
-    <div class="field-label">Сообщение</div>
-    <div class="field-value">{msg}</div>
-    </div>
-    </div>
-    <div class="footer">
-    <p>https://meeting.mosckba.ru/</p>
-    </div>
-    </div>
-    </body>
+        <body>
+            <style>
+                .container {
+                    max-width: 600px;
+                    margin: 20px auto;
+                    background-color: #ffffff;
+                    border-radius: 8px;
+                    overflow: hidden;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                }
+                .header {
+                    background-color: #1e3a8a;
+                    color: white;
+                    padding: 20px;
+                    text-align: center;
+                }
+                .header h2 {
+                    margin: 0;
+                    font-size: 16px;
+                }
+                .content {
+                    padding: 30px;
+                }
+                .field {
+                    margin-bottom: 20px;
+                    padding-bottom: 15px;
+                    border-bottom: 1px solid #eeeeee;
+                }
+                .field-label {
+                    font-weight: bold;
+                    color: #666666;
+                    margin-bottom: 5px;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                }
+                .field-value {
+                    font-size: 18px;
+                    color: #333333;
+                }
+                .footer {
+                    background-color: #f9f9f9;
+                    padding: 15px;
+                    text-align: center;
+                    font-size: 12px;
+                    color: #777777;
+                    border-top: 1px solid #eeeeee;
+                }
+                .footer p {
+                    margin: 5px 0;
+                }
+            </style>
+            <div class="container">
+            <div class="header">
+            <h2>Обратная связь | https://meeting.mosckba.ru/</h2>
+            </div>
+            <div class="content">
+            <div class="field">
+            <div class="field-label">ФИО</div>
+            <div class="field-value">{fio}</div>
+            </div>
+            <div class="field">
+            <div class="field-label">Телефон</div>
+            <div class="field-value">{phone}</div>
+            </div>
+            <div class="field">
+            <div class="field-label">Email</div>
+            <div class="field-value">{email}</div>
+            </div>
+            <div class="field">
+            <div class="field-label">Организация</div>
+            <div class="field-value">{organization}</div>
+            </div>
+            <div class="field">
+            <div class="field-label">Участие с докладом</div>
+            <div class="field-value">{report}</div>
+            </div>
+            <div class="field">
+            <div class="field-label">Сообщение</div>
+            <div class="field-value">{msg}</div>
+            </div>
+            </div>
+            <div class="footer">
+            <p>https://meeting.mosckba.ru/</p>
+            </div>
+            </div>
+        </body>
     </html>
     """
 

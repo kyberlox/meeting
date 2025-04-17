@@ -94,10 +94,6 @@ export default defineComponent({
 
         const setData = (name: string, value: string | boolean) => {
             formResults.value[name] = value;
-            console.log(v$.value);
-            console.log(name);
-            console.log(value);
-
             v$.value.formResults[name].$touch();
         };
 

@@ -18,7 +18,7 @@ def add_form_action(data):
     file = open("./static/form_action.json", "rb+")
     file_content = json.load(file)
     file_content["data"].append(data)
-    json.dumps(file_content, file, indent=4)
+    json.dump(file_content, file, indent=4)
     file.close()
 
 

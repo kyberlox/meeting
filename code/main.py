@@ -98,8 +98,6 @@ async def send_message(data=Body()):
     html_content = f"""
     <html>
     <body>
-        <p>Привет!<br>
-        Я отправил это <strong>программой</strong>
         <table>
             <tr><th>ФИО</th><th></th><strong>{fio}</strong></tr>
             <tr><td>Телефон</td><td><strong>{phone}</strong></td></tr>
@@ -107,7 +105,6 @@ async def send_message(data=Body()):
             <tr><td>Организация</td><td><strong>{organization}</strong></td></tr>
             <tr><td>Статус доклада</td><td><strong>{report}</strong></td></tr>
         </table>
-        </p>
     </body>
     </html>
     """

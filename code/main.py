@@ -108,6 +108,8 @@ async def send_message(data=Body()):
 
     #Собрать HTML
     html_content = f"""
+    <html>
+    <body>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -202,6 +204,8 @@ async def send_message(data=Body()):
     <p>https://meeting.mosckba.ru/</p>
     </div>
     </div>
+    </body>
+    </html>
     """
 
     #Отправить сообщение на почту

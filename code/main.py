@@ -81,7 +81,7 @@ async def stream_video(name : str):
     return StreamingResponse(file_like, media_type="video/mp4")
 
 @app.post("/api/send_form", tags=["send_message"])
-async def send_message(data = Body()):
+async def send_message(data : Body()):
     #Сохранить для статистики
     add_form_action(data)
 

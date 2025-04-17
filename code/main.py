@@ -175,27 +175,27 @@ async def send_message(data=Body()):
     <div class="content">
     <div class="field">
     <div class="field-label">ФИО</div>
-    <div class="field-value">${formResults.value.fio || 'Не указано'}</div>
+    <div class="field-value">{fio}</div>
     </div>
     <div class="field">
     <div class="field-label">Телефон</div>
-    <div class="field-value">${phone}</div>
+    <div class="field-value">{phone}</div>
     </div>
     <div class="field">
     <div class="field-label">Email</div>
-    <div class="field-value">${email}</div>
+    <div class="field-value">{email}</div>
     </div>
     <div class="field">
     <div class="field-label">Организация</div>
-    <div class="field-value">${organization}</div>
+    <div class="field-value">{organization}</div>
     </div>
     <div class="field">
     <div class="field-label">Участие с докладом</div>
-    <div class="field-value">${report}</div>
+    <div class="field-value">{report}</div>
     </div>
     <div class="field">
     <div class="field-label">Сообщение</div>
-    <div class="field-value">${msg}</div>
+    <div class="field-value">{msg}</div>
     </div>
     </div>
     <div class="footer">

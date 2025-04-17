@@ -1,3 +1,4 @@
 certbot
 /code/static/
 .env
+code/__pycache__/

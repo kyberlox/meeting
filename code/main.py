@@ -12,6 +12,8 @@ import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
+
+
 def add_form_action(data):
     file = open("./static/form_action.json", "r+")
     file_content = json.load(file)
@@ -73,7 +75,7 @@ async def root():
     </html>
     """
 
-@app.get("/api/video/{name}", tags=["video"])
+@app.get("/api/video{name}", tags=["video"])
 async def stream_video(name : str):
     path = f"/app/static/{name}"
     file_like  = open(path, mode="rb")
@@ -81,7 +83,7 @@ async def stream_video(name : str):
     return StreamingResponse(file_like, media_type="video/mp4")
 
 @app.post("/api/send_form", tags=["send_message"])
-async def send_message(data : Body()):
+async def send_message(data=Body()):
     #Сохранить для статистики
     add_form_action(data)
 

@@ -63,7 +63,6 @@
 
 <script lang="ts">
 import { defineComponent, ref } from "vue";
-import { RouterLink } from 'vue-router';
 import { navbarLinks } from "@/assets/data";
 export default defineComponent({
     name: "HeaderMos",
@@ -91,50 +90,3 @@ export default defineComponent({
     }
 })
 </script>
-
-<style lang="scss" scoped>
-#app {
-    max-width: 1200px;
-    margin: auto;
-    padding: 10px;
-}
-
-.header {
-    position: sticky;
-    top: 0;
-    z-index: 50;
-    border-bottom: 1px solid #f0f0f0;
-}
-
-.header__logo {
-    transition: transform 0.2s ease;
-
-    &:hover {
-        transform: scale(1.05);
-    }
-}
-
-.text-theme-grey-blue {
-    color: var(--theme-grey-blue);
-}
-
-.text-theme-blue-dark {
-    color: var(--theme-blue-dark);
-}
-
-.border-theme-orange {
-    border-color: var(--theme-orange);
-}
-
-
-.nav--active+.subnav {
-    display: flex;
-}
-
-@media (max-width: 640px) {
-    .header__navbar {
-        width: 100%;
-        justify-content: center;
-    }
-}
-</style>

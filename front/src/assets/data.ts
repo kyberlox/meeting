@@ -148,6 +148,48 @@ export const page = {
     phone: '8(495)955-78-86',
     phoneInner: '(доб. 1204 или 1471)',
     email: 'sovet@mosckba.ru',
+    formData: [{
+        id: 1,
+        title: 'ФИО',
+        name: 'fio',
+        type: 'text',
+        placeholder: 'Введите ФИО'
+    },
+    {
+        id: 2,
+        title: 'Телефон',
+        name: 'phone',
+        type: 'text',
+        placeholder: 'Введите Телефон'
+    },
+    {
+        id: 3,
+        title: 'Организация',
+        name: 'organization',
+        type: 'text',
+        placeholder: 'Укажите оргинизацию'
+    },
+    {
+        id: 4,
+        title: 'Email',
+        name: 'email',
+        type: 'text',
+        placeholder: 'Введите email'
+    },
+    {
+        id: 5,
+        title: 'Сообщение',
+        name: 'msg',
+        type: 'text',
+        placeholder: 'Введите сообщение'
+    },
+    {
+        id: 6,
+        title: 'С докладом',
+        name: 'report',
+        type: 'checkbox'
+    },
+    ]
 }
 
 export const navbarLinks = [
@@ -165,6 +207,11 @@ export const navbarLinks = [
     {
         id: 3,
         title: 'Контакты',
+        route: 'contacts'
+    },
+    {
+        id: 4,
+        title: 'Обратная связь',
         route: 'contacts'
     },
     // {

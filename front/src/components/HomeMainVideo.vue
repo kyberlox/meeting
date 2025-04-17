@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
     <div class="printed-container">
         <div class="gallery-preview__wrapper p-2 max-w-7xl printed-container mx-auto">
             <h3 class="gallery-preview__title text-3xl mt-10 text-center font-bold text-theme-blue-dark mb-4">
@@ -75,4 +75,4 @@ export default defineComponent({
         }
     }
 }
-</style>
+</style> -->

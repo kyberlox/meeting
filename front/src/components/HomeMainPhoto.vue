@@ -9,10 +9,11 @@
         <!--  текст -->
         <div class="absolute inset-0 flex items-center">
             <div
-                 class="text-left text-white p-3 sm:p-4 md:p-6 lg:p-8 text-sm sm:text-xl md:text-3xl lg:text-5xl xl:text-6xl 2xl:text-7xl ml-2 sm:ml-4 md:ml-8 lg:ml-16 xl:ml-24 max-w-full">
+                 class="text-left text-white p-3 sm:p-4 md:p-6 lg:p-8 text-md sm:text-xl md:text-3xl lg:text-5xl xl:text-6xl 2xl:text-7xl ml-2 sm:ml-4 md:ml-8 lg:ml-16 xl:ml-24 max-w-full">
                 <span class="font-medium">21-22 АВГУСТА</span>
                 <br />
-                <span class="text-theme-orange font-bold leading-[105%] sm:leading-[110%]">VII МЕЖДУНАРОДНАЯ
+                <span class="text-theme-orange text-theme-orange font-bold leading-[105%] sm:leading-[110%]">VII
+                    МЕЖДУНАРОДНАЯ
                     <br />
                     ПРОЕКТНАЯ КОНФЕРЕНЦИЯ <br />
                     ПО ТРУБОПРОВОДНЫМ СИСТЕМАМ <br /></span>
@@ -38,8 +39,3 @@ export default defineComponent({
     }
 })
 </script>
-<style lang="scss" scoped>
-.text-theme-orange {
-    color: var(--theme-orange);
-}
-</style>

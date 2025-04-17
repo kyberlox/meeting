@@ -66,33 +66,3 @@ export default defineComponent({
     }
 })
 </script>
-
-<style lang="scss">
-.text-theme-grey-blue {
-    color: var(--theme-grey-blue);
-}
-
-.text-theme-blue-light {
-    color: var(--theme-blue-light);
-}
-
-.text-theme-blue-dark {
-    color: var(--theme-blue-dark);
-}
-
-.text-theme-black {
-    color: var(--theme-black);
-}
-
-.text-theme-orange {
-    color: var(--theme-orange);
-}
-
-.bg-theme-blue-dark {
-    background-color: var(--theme-blue-dark);
-}
-
-.hover\:bg-theme-blue-light:hover {
-    background-color: var(--theme-blue-light);
-}
-</style>

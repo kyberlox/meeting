@@ -45,9 +45,3 @@ export default defineComponent({
     },
 })
 </script>
-
-<style lang="scss" scoped>
-.modal-fade {
-    background-color: rgba(0, 0, 0, 0.85);
-}
-</style>

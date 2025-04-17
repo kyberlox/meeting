@@ -1,11 +1,11 @@
 <template>
     <footer>
-        <div class="footer__wrapper  p-5">
-            <div class="footer flex text-sm flex-col items-center justify-center pb-2">
+        <div class="footer__wrapper text-gray-500 bg-black p-5">
+            <div class="footer font-semibold flex text-sm flex-col items-center justify-center pb-2">
                 <div class="footer-copyright mt-0.5">{{ copyright }}</div>
                 <div class="footer-email mt-0.5">{{ email }}</div>
-                <div class="footer-phone mt-0.5">{{ phone }}</div>
-                <div class="footer-phone mt-0.5">{{ phoneInner }}</div>
+                <div class="footer-phone text-theme-orange mt-0.5">{{ phone }}</div>
+                <div class="footer-phone text-theme-orange mt-0.5">{{ phoneInner }}</div>
             </div>
         </div>
     </footer>
@@ -25,18 +25,3 @@ export default defineComponent({
     }
 })
 </script>
-
-<style>
-.footer__wrapper {
-    background: black;
-}
-
-.footer {
-    color: #666;
-    font-weight: 600;
-}
-
-.footer-phone {
-    color: var(--theme-orange);
-}
-</style>

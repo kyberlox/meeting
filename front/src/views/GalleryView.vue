@@ -9,7 +9,7 @@
         <div @click="navArchiveOpen = !navArchiveOpen"
              class="archieve__title text-4xl mt-20 text-center font-bold text-theme-dark mb-4 flex flex-row gap-2 justify-center items-center content-center">
             Как это было в <span
-                  class="text-theme-orange relative flex flex-row cursor-pointer hover:text-theme-blue-dark transition-colors duration-300 justify-center items-center content-center group">{{
+                  class="text-theme-orange relative flex flex-row cursor-pointer hover:text-[var(--theme-blue-dark)]! transition-colors duration-300 justify-center items-center content-center group">{{
                     title
                 }}
                 <svg xmlns="http://www.w3.org/2000/svg"
@@ -94,7 +94,7 @@ export default defineComponent({
             const key = props.title as unknown as keyof typeof page.gallery;
             return page.gallery[key] || [];
         });
-        const isPlaying = ref(false);
+        // const isPlaying = ref(false);
 
         const openModal = (url: string) => {
             if (!url || url.includes('mp4')) return;
@@ -124,37 +124,3 @@ export default defineComponent({
     }
 })
 </script>
-
-<style lang="scss" scoped>
-.text-theme-orange {
-    color: var(--theme-orange);
-    transition: color 0.3s ease;
-
-    &:hover {
-        color: var(--theme-blue-dark);
-    }
-}
-
-@keyframes dropdown {
-    from {
-        opacity: 0;
-        transform: scale(0.95) translateY(-10px);
-    }
-
-    to {
-        opacity: 1;
-        transform: scale(1) translateY(0);
-    }
-}
-
-.animate-dropdown {
-    animation: dropdown 0.2s ease-out forwards;
-}
-
-.video-container:hover {
-    .play-icon {
-        transform: scale(1.01);
-        display: none;
-    }
-}
-</style>

@@ -38,7 +38,7 @@
 import { defineComponent } from 'vue'
 import { page } from '@/assets/data'
 export default defineComponent({
-    name: 'AboutInfo',
+    name: 'HomeAbout',
     setup() {
         return {
 
@@ -50,43 +50,3 @@ export default defineComponent({
     }
 })
 </script>
-
-<style scoped>
-.text-theme-grey-blue {
-    color: var(--theme-grey-blue);
-}
-
-.text-theme-blue-light {
-    color: var(--theme-blue-light);
-}
-
-.text-theme-blue-dark {
-    color: var(--theme-blue-dark);
-}
-
-.text-theme-black {
-    color: var(--theme-black);
-}
-
-.text-theme-orange {
-    color: var(--theme-orange);
-}
-
-.border-theme-blue-light {
-    border-color: var(--theme-blue-light);
-}
-
-.first-row__about-blocks__block:hover {
-    border-color: var(--theme-orange);
-}
-
-@media (max-width: 768px) {
-    .first-row__title {
-        font-size: 1.75rem;
-    }
-
-    .first-row__description {
-        font-size: 1rem;
-    }
-}
-</style>

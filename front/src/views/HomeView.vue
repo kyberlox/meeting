@@ -1,6 +1,6 @@
 <template>
   <DownHeaderPhoto />
-  <AboutInfo />
+  <HomeAbout />
   <!-- <HomeMainVideo /> -->
   <GalleryPreview />
   <Partycipants ref=participants />
@@ -10,7 +10,7 @@
 
 <script lang="ts">
 import { defineComponent, ref, watch, computed, onMounted, type ComponentPublicInstance } from 'vue'
-import AboutInfo from "@/components/HomeAbout.vue";
+import HomeAbout from "@/components/HomeAbout.vue";
 import GalleryPreview from "@/components/GalleryPreview.vue";
 import PlaceYMap from "@/components/HomeYMap.vue";
 import Contacts from "@/components/HomeContacts.vue";
@@ -21,7 +21,7 @@ import { setSeo } from '@/utils/setSeo'
 
 export default defineComponent({
   components: {
-    AboutInfo,
+    HomeAbout,
     GalleryPreview,
     PlaceYMap,
     Contacts,

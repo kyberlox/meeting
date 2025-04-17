@@ -5,11 +5,12 @@
             Участники
         </div>
         <div
-             class="partycipants-preview mt-6 sm:mt-8 md:mt-10 grid gap-4 grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-auto gap-2 sm:gap-3 md:gap-4">
-            <div class="partycipants-preview__item m-auto"
+             class="partycipants-preview mt-6 sm:mt-8 md:mt-10 grid  grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-auto gap-2 sm:gap-3 md:gap-4">
+            <div class="partycipants-preview__item flex justify-center items-center m-auto"
                  v-for="(item, index) in galleryItems"
                  :key="index + 'slide'">
-                <div class="partycipants-preview__item__image">
+                <div
+                     class="partycipants-preview__item__image transition-transform duration-300 ease-in-out hover:scale-105">
                     <img class="rounded-xl w-full h-auto max-w-[120px] sm:max-w-[150px] md:max-w-[180px]"
                          :src="item"
                          alt="Participant logo" />
@@ -31,20 +32,3 @@ export default defineComponent({
     }
 })
 </script>
-
-<style scoped>
-/* Removed the conflicting CSS that was overriding Tailwind grid settings */
-.partycipants-preview__item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.partycipants-preview__item__image {
-    transition: transform 0.3s ease;
-}
-
-.partycipants-preview__item__image:hover {
-    transform: scale(1.05);
-}
-</style>

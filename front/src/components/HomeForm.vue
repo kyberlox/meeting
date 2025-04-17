@@ -13,7 +13,7 @@
                            @input="setData(item.name, item.type !== 'checkbox' ? ($event.target as HTMLInputElement).value : ($event.target as HTMLInputElement).checked)"
                            class="mt-1"
                            :class="[
-                            item.type === 'checkbox' ? 'h-5 w-5 text-blue-600' : 'w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-300 focus:border-blue-500',
+                            item.type === 'checkbox' ? 'h-5 mt-0! w-5 text-blue-600' : 'w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-300 focus:border-blue-500',
                         ]" />
                 </label>
                 <div v-if="v$.formResults[item.name]?.$error"
@@ -83,6 +83,9 @@ export default defineComponent({
                 },
                 msg: {
                     // 
+                },
+                report: {
+
                 }
             }
         }));
@@ -91,6 +94,10 @@ export default defineComponent({
 
         const setData = (name: string, value: string | boolean) => {
             formResults.value[name] = value;
+            console.log(v$.value);
+            console.log(name);
+            console.log(value);
+
             v$.value.formResults[name].$touch();
         };
 

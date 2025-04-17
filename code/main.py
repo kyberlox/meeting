@@ -15,7 +15,7 @@ from email.mime.multipart import MIMEMultipart
 
 
 def add_form_action(data):
-    file = open("./static/form_action.json", "r+")
+    file = open("./static/form_action.json", "rb+")
     file_content = json.load(file)
     file_content.append(data)
     json.dump(file_content, file, indent=4)

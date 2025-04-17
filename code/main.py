@@ -111,55 +111,55 @@ async def send_message(data=Body()):
     <html>
         <body>
             <style>
-                .container /{
+                .container {{
                     max-width: 600px;
                     margin: 20px auto;
                     background-color: #ffffff;
                     border-radius: 8px;
                     overflow: hidden;
                     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                /}
-                .header /{
+                }}
+                .header {{
                     background-color: #1e3a8a;
                     color: white;
                     padding: 20px;
                     text-align: center;
-                /}
-                .header h2 /{
+                }}
+                .header h2 {{
                     margin: 0;
                     font-size: 16px;
-                /}
-                .content /{
+                }}
+                .content {{
                     padding: 30px;
-                /}
-                .field /{
+                }}
+                .field {{
                     margin-bottom: 20px;
                     padding-bottom: 15px;
                     border-bottom: 1px solid #eeeeee;
-                /}
-                .field-label /{
+                }}
+                .field-label {{
                     font-weight: bold;
                     color: #666666;
                     margin-bottom: 5px;
                     font-size: 14px;
                     text-transform: uppercase;
                     letter-spacing: 1px;
-                /}
-                .field-value /{
+                }}
+                .field-value {{
                     font-size: 18px;
                     color: #333333;
-                /}
-                .footer /{
+                }}
+                .footer {{
                     background-color: #f9f9f9;
                     padding: 15px;
                     text-align: center;
                     font-size: 12px;
                     color: #777777;
                     border-top: 1px solid #eeeeee;
-                /}
-                .footer p /{
+                }}
+                .footer p {{
                     margin: 5px 0;
-                /}
+                }}
             </style>
             <div class="container">
             <div class="header">

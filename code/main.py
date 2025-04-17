@@ -41,6 +41,7 @@ def send_mail(html_content):
     from_email = email
     to_email_1 = "gazinskii.i.v@emk.ru"
     to_email_2 = "timofeev.a.a@emk.ru"
+    to_email_3 = "sovet@mosckba.ru"
 
     message = MIMEMultipart("alternative")
     message["Subject"] = "Сообщение отправлено через форму на сайте meeting.mosckba.ru"
@@ -54,6 +55,9 @@ def send_mail(html_content):
 
     message["To"] = to_email_2
     server.sendmail(from_email, to_email_2, message.as_string())
+
+    message["To"] = to_email_3
+    server.sendmail(from_email, to_email_3, message.as_string())
 
     server.quit()
 

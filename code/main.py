@@ -92,6 +92,7 @@ async def send_message(data=Body()):
     phone = data["phone"]
     email = data["email"]
     organization = data["organization"]
+    msg = data["msg"]
     report = "С докладом" if data["report"] else "Без доклада"
 
     #Сохранить для статистики
@@ -100,7 +101,8 @@ async def send_message(data=Body()):
         "phone" : phone,
         "email" : email,
         "organization" : organization,
-        "report" : report
+        "report" : report,
+        "msg" : msg
     }
     add_form_action(jsn)
 
@@ -114,6 +116,7 @@ async def send_message(data=Body()):
             <tr><td>email</td><td><strong>{email}</strong></td></tr>
             <tr><td>Организация</td><td><strong>{organization}</strong></td></tr>
             <tr><td>Статус доклада</td><td><strong>{report}</strong></td></tr>
+            <tr><td>Сообщение</td><td><strong>{msg}</strong></td></tr>
         </table>
     </body>
     </html>

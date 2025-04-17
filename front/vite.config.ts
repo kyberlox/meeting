@@ -23,6 +23,13 @@ export default defineConfig({
   server: {
     host: "0.0.0.0",
     port: 4173,
+    proxy: {
+      '/api': {
+        target: 'http://meeting.mosckba.ru:8000',
+        changeOrigin: true,
+        secure: false
+      }
+    }
   },
   preview: {
     allowedHosts: ['meeting.mosckba.ru']

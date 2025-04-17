@@ -109,7 +109,7 @@ export default defineComponent({
         };
 
         const sendEmail = () => {
-            fetch('http://meeting.mosckba.ru:8000/api/send_form', {
+            fetch('/api/send_form', {
                 method: 'POST',
                 body: JSON.stringify(formResults.value),
                 headers: {

@@ -1,7 +1,7 @@
 <template>
     <div class="archieve__wrapper"
          v-if="title && images">
-        <div class="w-full max-h-120 h-auto bg-no-repeat bg-cover bg-center rounded-md aspect-16/9 bg-position-[center_top_55%]"
+        <div class="w-full max-h-120 h-auto bg-no-repeat bg-cover bg-center rounded-md aspect-16/9 bg-position-[50%_10%]"
              :style="{ 'background-image': `url(${topPhoto})` }">
         </div>
         <h1 class="sr-only">Галерея: {{ title }}</h1>

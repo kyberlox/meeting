@@ -167,7 +167,7 @@ export const page = {
         title: 'Организация',
         name: 'organization',
         type: 'text',
-        placeholder: 'Укажите оргинизацию'
+        placeholder: 'Укажите организацию'
     },
     {
         id: 4,

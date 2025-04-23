@@ -85,8 +85,8 @@ export default defineComponent({
         })
 
         onMounted(() => {
-            const metaTitle = computed(() => `Галерея | Слет проектировщиков`);
-            const metaDescription = computed(() => `Фотографии с прошедших мероприятий | Слет проектировщиков`);
+            const metaTitle = computed(() => `Галерея | Конференция по трубопроводным системам`);
+            const metaDescription = computed(() => `Фотографии с прошедших мероприятий | Конференция по трубопроводным системам`);
             setSeo(metaTitle.value, metaDescription.value, 'gallery', topPhoto.value)
         })
 

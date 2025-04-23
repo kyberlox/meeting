@@ -37,8 +37,8 @@ export default defineComponent({
   emits: ['scrollToEl'],
   setup(props, { emit }) {
     onMounted(() => {
-      const metaTitle = computed(() => `Главная | Слет проектировщиков`);
-      const metaDescription = computed(() => `О нас | Слет проектировщиков`);
+      const metaTitle = computed(() => `Главная | Конференция по трубопроводным системам`);
+      const metaDescription = computed(() => `О нас | Конференция по трубопроводным системам`);
       setSeo(metaTitle.value, metaDescription.value, 'about');
     })
 

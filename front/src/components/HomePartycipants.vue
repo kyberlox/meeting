@@ -3,7 +3,7 @@
          class="partycipants-preview__wrapper p-2 sm:p-4 w-full max-w-7xl  mx-auto">
         <div
              class="partycipants-preview__title text-xl sm:text-2xl md:text-3xl  text-center font-bold text-theme-black mb-2 sm:mb-4">
-            В наших мероприятиях приняли участие следующие клиенты:
+            В наших мероприятиях приняли участие Компании:
         </div>
         <transition-group name="logo-list"
                           tag="div"

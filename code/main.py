@@ -209,7 +209,12 @@ async def send_message(data=Body()):
 @app.get("/api/logos", tags=["Логотипы"])
 async def get_logos():
     path = f"/app/static/logo/"
-    return os.listdir(path)
+    file_names = os.listdir(path)
+    urls = []
+    for file_name in file_names:
+        url = f"https://meeting.mosckba.ru/api/static/logo/{file_name}"
+        urls.append(url)
+    return urls
 
 
 

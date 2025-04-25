@@ -1,5 +1,6 @@
 <template>
-    <div class="partycipants-preview__wrapper p-2 sm:p-4 w-full max-w-7xl  mx-auto">
+    <div v-if="visibleLogos"
+         class="partycipants-preview__wrapper p-2 sm:p-4 w-full max-w-7xl  mx-auto">
         <div
              class="partycipants-preview__title text-xl sm:text-2xl md:text-3xl  text-center font-bold text-theme-black mb-2 sm:mb-4">
             В наших мероприятиях приняли участие следующие клиенты:
@@ -37,9 +38,9 @@ export default defineComponent({
         const logos = ref();
         const showAll = ref(false);
         const visibleLogos = ref();
-        const API_URL = 'http://meeting.mosckba.ru/api';
+        const API_URL = "https://meeting.mosckba.ru/api";
         onMounted(() => {
-            fetch(API_URL + 'logos')
+            fetch(API_URL + '/logos')
                 .then(res => res.json())
                 .then(data => {
                     logos.value = data;

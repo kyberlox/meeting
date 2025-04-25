@@ -82,7 +82,7 @@ async def root():
     </html>
     """
 
-@app.get("/api/video{name}", tags=["video"])
+@app.get("/api/video/{name}", tags=["video"])
 async def stream_video(name : str):
     path = f"/app/static/{name}"
     file_like  = open(path, mode="rb")
@@ -205,6 +205,21 @@ async def send_message(data=Body()):
 
     #Отправить сообщение на почту
     return send_mail(html_content)
+
+@app.get("/api/logos", tags=["Логотипы"])
+async def get_logos():
+    path = f"/app/static/logo/"
+    return os.listdir(path)
+
+
+
+# @app.get("/api/logo/{name}", tags=["Логотипы"])
+# async def get_logo(name : str):
+#     ath = f"/app/static/{name}"
+#     file_like  = open(path, mode="rb")
+
+#     return FileResponse(file_like)
+
 
 
 # @app.get("/api/static_video/{name}", tags=["video"])

@@ -37,6 +37,7 @@ export default defineComponent({
         const logos = ref();
         const showAll = ref(false);
         const visibleLogos = ref();
+        const API_URL = 'http://meeting.mosckba.ru/api';
         onMounted(() => {
             fetch(API_URL + 'logos')
                 .then(res => res.json())

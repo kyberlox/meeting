@@ -42,4 +42,7 @@ export default defineConfig({
       }
     }
   },
+  define: {
+    'API_URL': JSON.stringify('http://meeting.mosckba.ru/api/')
+  }
 })

@@ -139,7 +139,7 @@ export const page = {
 
         2024: ['/archivePhotos/2024/1.jpg', '/archivePhotos/2024/2.jpg', '/archivePhotos/2024/3.jpg', '/archivePhotos/2024/4.jpg', '/archivePhotos/2024/5.jpg', '/archivePhotos/2024/6.jpg', '/archivePhotos/2024/7.jpg', '/archivePhotos/2024/8.jpg', '/archivePhotos/2024/9.jpg', '/archivePhotos/2024/10.jpg', '/archivePhotos/2024/11.jpg', '/archivePhotos/2024/12.jpg'],
     },
-    partycipants: ['/partycipants/atom.png', '/partycipants/gks.png', '/partycipants/lukoyl.png', '/partycipants/ozna.png', '/partycipants/sibur.png', '/partycipants/slavneft.png', '/partycipants/gazprom.jpg', '/partycipants/gazpr.png', '/partycipants/mmk.png', '/partycipants/mchl.png'],
+    partycipants: '/partycipants/',
     place: '"Лесники"',
     address: 'Город Курган, п. Усть-Утяк',
     street: 'Курортная ул., 1, посёлок сельского типа Усть-Утяк',

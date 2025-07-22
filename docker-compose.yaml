@@ -52,6 +52,7 @@ services:
   # -v "./certbot/var:/var/lib/letsencrypt" \
   # -p 80:80 \
   # certbot/certbot certonly --standalone -d meeting.mosckba.ru --email it.dpm@emk.ru --agree-tos --non-interactive --keep-until-expiring
+  
   certbot:
     image: certbot/certbot
     depends_on:

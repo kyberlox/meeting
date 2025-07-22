@@ -28,8 +28,10 @@ services:
     volumes:
       - ./nginx/:/etc/nginx/conf.d/
       - ../front/public/:/web/mediacontent
-      - ./certbot/conf:/etc/letsencrypt
-      - ./certbot/www:/var/www/certbot
+      #- ./certbot/conf:/etc/letsencrypt
+      #- ./certbot/www:/var/www/certbot
+      - ./certbot/etc:/etc/letsencrypt
+      - ./certbot/var:/var/www/certbot
     networks:
       - app-network
 
@@ -45,6 +47,11 @@ services:
     networks:
       - app-network
   
+  #docker run -it --rm --name certbot \
+  # -v "./certbot/etc:/etc/letsencrypt" \
+  # -v "./certbot/var:/var/lib/letsencrypt" \
+  # -p 80:80 \
+  # certbot/certbot certonly --standalone -d meeting.mosckba.ru --email it.dpm@emk.ru --agree-tos --non-interactive --keep-until-expiring
   certbot:
     image: certbot/certbot
     depends_on:

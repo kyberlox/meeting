@@ -4,12 +4,13 @@
             <div
                  class="header__wrapper max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4 flex flex-col sm:flex-row justify-between items-center">
                 <div class="header__logo__wrapper mb-3 sm:mb-0">
-                    <RouterLink to="/"
-                                class="header__logo">
+                    <a href="https://mosckba.ru/"
+                       target="_blank"
+                       class="header__logo">
                         <img src="@/assets/logo.png"
                              alt="logo"
                              class="h-8 sm:h-10 md:h-12 w-auto">
-                    </RouterLink>
+                    </a>
                 </div>
                 <nav class="w-full sm:w-auto">
                     <ul
@@ -64,6 +65,7 @@
 <script lang="ts">
 import { defineComponent, ref } from "vue";
 import { navbarLinks } from "@/assets/data";
+
 export default defineComponent({
     name: "HeaderMos",
     emits: ['scrollToEl'],

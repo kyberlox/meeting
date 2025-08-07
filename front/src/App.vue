@@ -26,15 +26,18 @@ export default defineComponent({
     const scrollTarget = ref(<null | string>null);
 
     const handleScroll = (section: string) => {
-
-      if ((section == 'participants' || section == 'contacts') && route.name !== 'home') {
-        router.push({ name: 'home' }).then(() => {
+      if (section == 'home') {
+        router.push({ name: 'home' })
+      }
+      else
+        if ((section == 'participants' || section == 'contacts') && route.name !== 'home') {
+          router.push({ name: 'home' }).then(() => {
+            scrollTarget.value = section;
+          });
+        }
+        else {
           scrollTarget.value = section;
-        });
-      }
-      else {
-        scrollTarget.value = section;
-      }
+        }
 
       setTimeout(() => {
         scrollTarget.value = null;

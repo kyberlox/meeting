@@ -19,7 +19,7 @@
                     ПО ТРУБОПРОВОДНЫМ СИСТЕМАМ <br /></span>
                 <span
                       class="font-light text-theme-white text-xs sm:text-sm md:text-xl lg:text-2xl xl:text-3xl block mt-1 sm:mt-2 md:mt-3">
-                    Организатор АО «МОСЦКБА» при поддержке НПАА
+                    Организатор АО «МосЦКБА» при поддержке НПАА
                 </span>
             </div>
         </div>

@@ -139,7 +139,7 @@ export const page = {
 
         2024: ['/archivePhotos/2024/1.jpg', '/archivePhotos/2024/2.jpg', '/archivePhotos/2024/3.jpg', '/archivePhotos/2024/4.jpg', '/archivePhotos/2024/5.jpg', '/archivePhotos/2024/6.jpg', '/archivePhotos/2024/7.jpg', '/archivePhotos/2024/8.jpg', '/archivePhotos/2024/9.jpg', '/archivePhotos/2024/10.jpg', '/archivePhotos/2024/11.jpg', '/archivePhotos/2024/12.jpg'],
     },
-    partycipants: '/partycipants/',
+    partycipants: ['/partycipants/atom.png', '/partycipants/gks.png', '/partycipants/lukoyl.png', '/partycipants/ozna.png', '/partycipants/sibur.png', '/partycipants/slavneft.png', '/partycipants/gazprom.jpg', '/partycipants/gazpr.png', '/partycipants/mmk.png', '/partycipants/mchl.png'],
     place: '"Лесники"',
     address: 'Город Курган, п. Усть-Утяк',
     street: 'Курортная ул., 1, посёлок сельского типа Усть-Утяк',
@@ -195,25 +195,26 @@ export const page = {
 export const navbarLinks = [
     {
         id: 1,
+        title: 'Главная',
+        route: 'home'
+    },
+    {
+        id: 2,
         title: 'Архив',
         route: '/archive',
         subpoints: [2024, 2023, 2022, 2019, 2018]
     },
     {
-        id: 2,
+        id: 3,
         title: 'Участники',
         route: 'participants'
     },
     {
-        id: 3,
+        id: 4,
         title: 'Контакты',
         route: 'contacts'
     },
-    {
-        id: 4,
-        title: 'Обратная связь',
-        route: 'contacts'
-    },
+
     // {
     //     id: 4,
     //     title: 'Программа',

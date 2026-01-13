@@ -127,6 +127,7 @@ export const page = {
         2022: '/archivePhotos/2022/back.jpg',
         2023: '/archivePhotos/2023/back.jpg',
         2024: '/archivePhotos/2024/back.jpg',
+        2025: '/archivePhotos/2025/back.jpg',
     },
     gallery: {
         2018: ['/archivePhotos/2018/1.jpg', '/archivePhotos/2018/2.jpg', '/archivePhotos/2018/3.jpg', '/archivePhotos/2018/4.jpg', '/archivePhotos/2018/5.jpg', '/archivePhotos/2018/6.jpg', '/archivePhotos/2018/7.jpg', '/archivePhotos/2018/8.jpg', '/archivePhotos/2018/9.jpg', '/archivePhotos/2018/10.jpg', '/archivePhotos/2018/11.jpg', '/archivePhotos/2018/12.jpg'],
@@ -138,6 +139,8 @@ export const page = {
         2023: ['/archivePhotos/2023/1.jpg', '/archivePhotos/2023/2.jpg', '/archivePhotos/2023/3.jpg', '/archivePhotos/2023/4.jpg', '/archivePhotos/2023/5.jpg', '/archivePhotos/2023/6.jpg', '/archivePhotos/2023/7.jpg', '/archivePhotos/2023/8.jpg', '/archivePhotos/2023/9.jpg', '/archivePhotos/2023/10.jpg', '/archivePhotos/2023/11.jpg', '/archivePhotos/2023/12.jpg'],
 
         2024: ['/archivePhotos/2024/1.jpg', '/archivePhotos/2024/2.jpg', '/archivePhotos/2024/3.jpg', '/archivePhotos/2024/4.jpg', '/archivePhotos/2024/5.jpg', '/archivePhotos/2024/6.jpg', '/archivePhotos/2024/7.jpg', '/archivePhotos/2024/8.jpg', '/archivePhotos/2024/9.jpg', '/archivePhotos/2024/10.jpg', '/archivePhotos/2024/11.jpg', '/archivePhotos/2024/12.jpg'],
+
+        2025: ['/archivePhotos/2025/1.jpg', '/archivePhotos/2025/2.jpg', '/archivePhotos/2025/3.jpg', '/archivePhotos/2025/4.jpg', '/archivePhotos/2025/5.jpg'],
     },
     partycipants: ['/partycipants/atom.png', '/partycipants/gks.png', '/partycipants/lukoyl.png', '/partycipants/ozna.png', '/partycipants/sibur.png', '/partycipants/slavneft.png', '/partycipants/gazprom.jpg', '/partycipants/gazpr.png', '/partycipants/mmk.png', '/partycipants/mchl.png'],
     place: '"Лесники"',
@@ -202,7 +205,7 @@ export const navbarLinks = [
         id: 2,
         title: 'Архив',
         route: '/archive',
-        subpoints: [2024, 2023, 2022, 2019, 2018]
+        subpoints: [2025, 2024, 2023, 2022, 2019, 2018]
     },
     {
         id: 3,

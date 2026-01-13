@@ -140,7 +140,7 @@ export const page = {
 
         2024: ['/archivePhotos/2024/1.jpg', '/archivePhotos/2024/2.jpg', '/archivePhotos/2024/3.jpg', '/archivePhotos/2024/4.jpg', '/archivePhotos/2024/5.jpg', '/archivePhotos/2024/6.jpg', '/archivePhotos/2024/7.jpg', '/archivePhotos/2024/8.jpg', '/archivePhotos/2024/9.jpg', '/archivePhotos/2024/10.jpg', '/archivePhotos/2024/11.jpg', '/archivePhotos/2024/12.jpg'],
 
-        2025: ['/archivePhotos/2025/1.jpg', '/archivePhotos/2025/2.jpg', '/archivePhotos/2025/3.jpg', '/archivePhotos/2025/4.jpg', '/archivePhotos/2025/5.jpg'],
+        2025: ['/archivePhotos/2025/1.jpg', '/archivePhotos/2025/2.jpg', '/archivePhotos/2025/3.jpg', '/archivePhotos/2025/4.jpg', '/archivePhotos/2025/5.jpg', '/archivePhotos/2025/6.jpg', '/archivePhotos/2025/7.jpg', '/archivePhotos/2025/8.jpg', '/archivePhotos/2025/9.jpg'],
     },
     partycipants: ['/partycipants/atom.png', '/partycipants/gks.png', '/partycipants/lukoyl.png', '/partycipants/ozna.png', '/partycipants/sibur.png', '/partycipants/slavneft.png', '/partycipants/gazprom.jpg', '/partycipants/gazpr.png', '/partycipants/mmk.png', '/partycipants/mchl.png'],
     place: '"Лесники"',

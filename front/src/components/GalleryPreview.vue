@@ -19,7 +19,7 @@
         <div class="gallery-years mt-8 pb-8">
             <h3 class="text-2xl font-bold text-center text-theme-black mb-4">Архив событий за</h3>
             <div class="gallery-years__links flex justify-center flex-wrap gap-4">
-                <button v-for="year in galleryYears.sort((a, b) => Number(a) - Number(b))"
+                <button v-for="year in galleryYears.sort((a: string, b: string) => Number(a) - Number(b))"
                         :key="year"
                         @click="goToGallery(year)"
                         class="hover:bg-[var(--theme-blue-light)]! cursor-pointer  text-xl py-2 px-6 rounded-md transition-colors bg-theme-blue-dark text-white duration-300 shadow-sm hover:shadow-md">

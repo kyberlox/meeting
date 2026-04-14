@@ -64,8 +64,7 @@ export const page = {
             text:
                 `<ol class="list-disk pl-6 space-y-4 text-gray-800" style="list-style-type: disc;">
 <li class="pl-2 leading-relaxed">
-    Посещение производственных предприятий Саратова и интерактивных мероприятий
-Интерактивные испытания в соревновательном формате, посещение площадок и лабораторий АНО КЦИСС.
+    Посещение производственных предприятий Саратова и интерактивных мероприятий.
 </li>
 <li class="pl-2 leading-relaxed">
    Конференция в презентационно-дискуссионном формате.
@@ -142,9 +141,10 @@ export const page = {
         2025: ['/archivePhotos/2025/1.jpg', '/archivePhotos/2025/2.jpg', '/archivePhotos/2025/3.jpg', '/archivePhotos/2025/4.jpg', '/archivePhotos/2025/5.jpg', '/archivePhotos/2025/6.jpg', '/archivePhotos/2025/7.jpg', '/archivePhotos/2025/8.jpg', '/archivePhotos/2025/9.jpg'],
     },
     partycipants: ['/partycipants/atom.png', '/partycipants/gks.png', '/partycipants/lukoyl.png', '/partycipants/ozna.png', '/partycipants/sibur.png', '/partycipants/slavneft.png', '/partycipants/gazprom.jpg', '/partycipants/gazpr.png', '/partycipants/mmk.png', '/partycipants/mchl.png'],
-    place: '"Богемия"',
-    address: 'Город Саратов, гостиница Богемия',
-    street: 'ул. Железнодорожная, 72',
+    place: '"Гостиница Богемия"',
+    address: '',
+    // address: 'Город Саратов, гостиница Богемия',
+    street: 'г. Саратов, ул. Железнодорожная, 72',
     coordinatesH: 51.536027,
     coordinatesW: 46.006678,
     phone: '8(495)955-78-86',

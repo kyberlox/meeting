@@ -1,7 +1,8 @@
 export const page = {
     firstImg: '/homeImg.jpg',
-    date: '21.08.2025',
-    title: 'VII МЕЖДУНАРОДНАЯ ПРОЕКТНАЯ КОНФЕРЕНЦИЯ ПО ТРУБОПРОВОДНЫМ СИСТЕМАМ',
+    date: '15.07.2026',
+    dateTo: '15-17 ИЮЛЯ',
+    title: 'VIII МЕЖДУНАРОДНАЯ ПРОЕКТНАЯ КОНФЕРЕНЦИЯ ПО ТРУБОПРОВОДНЫМ СИСТЕМАМ',
     description: `На конференции вы сможете ознакомиться с новинками высокотехнологичного оборудования и лично пообщаться
     с главными конструкторами, проектировщиками и испытателями. Обсудить лучшие практики применения решений
     в области трубопроводной арматуры, вопросы реальных условий эксплуатации оборудования, возможности
@@ -63,10 +64,8 @@ export const page = {
             text:
                 `<ol class="list-disk pl-6 space-y-4 text-gray-800" style="list-style-type: disc;">
 <li class="pl-2 leading-relaxed">
-    Посещение производственных предприятий Курганской области и интерактивных мероприятий.
-</li>
-<li class="pl-2 leading-relaxed">
-   Интерактивные испытания в соревновательном формате, посещение площадок и лабораторий АНО КЦИСС.
+    Посещение производственных предприятий Саратова и интерактивных мероприятий
+Интерактивные испытания в соревновательном формате, посещение площадок и лабораторий АНО КЦИСС.
 </li>
 <li class="pl-2 leading-relaxed">
    Конференция в презентационно-дискуссионном формате.
@@ -143,13 +142,13 @@ export const page = {
         2025: ['/archivePhotos/2025/1.jpg', '/archivePhotos/2025/2.jpg', '/archivePhotos/2025/3.jpg', '/archivePhotos/2025/4.jpg', '/archivePhotos/2025/5.jpg', '/archivePhotos/2025/6.jpg', '/archivePhotos/2025/7.jpg', '/archivePhotos/2025/8.jpg', '/archivePhotos/2025/9.jpg'],
     },
     partycipants: ['/partycipants/atom.png', '/partycipants/gks.png', '/partycipants/lukoyl.png', '/partycipants/ozna.png', '/partycipants/sibur.png', '/partycipants/slavneft.png', '/partycipants/gazprom.jpg', '/partycipants/gazpr.png', '/partycipants/mmk.png', '/partycipants/mchl.png'],
-    place: '"Лесники"',
-    address: 'Город Курган, п. Усть-Утяк',
-    street: 'Курортная ул., 1, посёлок сельского типа Усть-Утяк',
-    coordinatesH: 55.272219,
-    coordinatesW: 65.312057,
+    place: '"Богемия"',
+    address: 'Город Саратов, гостиница Богемия',
+    street: 'ул. Железнодорожная, 72',
+    coordinatesH: 51.536027,
+    coordinatesW: 46.006678,
     phone: '8(495)955-78-86',
-    phoneInner: '(доб. 1204 или 1471)',
+    phoneInner: '(доб. 1204)',
     email: 'sovet@mosckba.ru',
     formData: [{
         id: 1,

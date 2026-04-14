@@ -34,7 +34,8 @@ export default defineComponent({
     setup() {
         const img = page.firstImg;
         return {
-            img
+            img,
+            page
         }
     }
 })

@@ -10,8 +10,8 @@
             <div class="gallery-preview__item"
                  v-for="(item, index) in galleryItems"
                  :key="index + 'slide'">
-                <div class="gallery-preview__item__image">
-                    <img class="rounded-xl"
+                <div class="gallery-preview__item__image aspect-[3/4] overflow-hidden rounded-xl">
+                    <img class="block h-full w-full object-cover"
                          :src="item" />
                 </div>
             </div>

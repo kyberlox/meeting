@@ -36,11 +36,13 @@
             </h2>
             <h3
                 class="first-row__about-blocks__block__description text-base sm:text-lg md:text-xl text-blue-500 hover:text-blue-600 text-wrap underline">
-                <a href="/public/priglashenie.docx">Приглашение</a>
+                <a href="/public/priglashenie.docx"
+                   download>Приглашение</a>
             </h3>
             <h3
                 class="first-row__about-blocks__block__description text-base sm:text-lg md:text-xl text-blue-500 hover:text-blue-600 text-wrap underline">
-                <a href="/public/priglashenie.docx">Программа</a>
+                <a href="/public/priglashenie.docx"
+                   download>Программа</a>
             </h3>
         </div>
     </div>

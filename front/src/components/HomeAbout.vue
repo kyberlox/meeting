@@ -15,8 +15,7 @@
             {{ pageDescription }}
         </div>
 
-        <div
-             class="first-row__about-blocks columns-1 sm:columns-2 mt-8 sm:mt-12 md:mt-20 gap-3 sm:gap-4">
+        <div class="first-row__about-blocks columns-1 sm:columns-2 mt-8 sm:mt-12 md:mt-20 gap-3 sm:gap-4">
             <div v-for="(block) in blocks"
                  :key="'aboutBlock' + block.id"
                  class="first-row__about-blocks__block break-inside-avoid bg-gray-50 mb-3 sm:mb-4 p-3 sm:p-4 md:p-5 rounded-md border-theme-blue-light shadow-md transition-shadow duration-300">
@@ -29,10 +28,24 @@
                 </h3>
             </div>
         </div>
+        <div
+             class="first-row__about-blocks__block break-inside-avoid bg-gray-50 mb-3 sm:mb-4 p-3 sm:p-4 md:p-5 rounded-md border-theme-blue-light shadow-md transition-shadow duration-300">
+            <h2
+                class="first-row__about-blocks__block__title text-theme-blue-dark font-bold text-xl sm:text-2xl mb-1 sm:mb-2">
+                Приглашение и программа:
+            </h2>
+            <h3
+                class="first-row__about-blocks__block__description text-base sm:text-lg md:text-xl text-blue-500 hover:text-blue-600 text-wrap underline">
+                <a href="/public/priglashenie.docx">Приглашение</a>
+            </h3>
+            <h3
+                class="first-row__about-blocks__block__description text-base sm:text-lg md:text-xl text-blue-500 hover:text-blue-600 text-wrap underline">
+                <a href="/public/priglashenie.docx">Программа</a>
+            </h3>
+        </div>
     </div>
 </div>
 </template>
-
 
 <script lang="ts">
 import { defineComponent } from 'vue'

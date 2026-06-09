@@ -52,6 +52,7 @@ def send_mail(html_content):
     part_html = MIMEText(html_content, "html")
     message.attach(part_html)
 
+    successful_sends = 0
     for to_email in to_emails:
         try:
             message["To"] = to_email

@@ -1,11 +1,10 @@
 <template>
-  <HeaderMos @scrollToEl="(x) => handleScroll(x)" />
-
-  <main>
-    <RouterView :scrollTarget=scrollTarget />
-  </main>
-  <YandexMetrika />
-  <FooterV />
+<HeaderMos @scrollToEl="(x) => handleScroll(x)" />
+<main>
+  <RouterView :scrollTarget=scrollTarget />
+</main>
+<YandexMetrika />
+<FooterV />
 </template>
 
 <script lang="ts">

@@ -1,11 +1,11 @@
 <template>
-  <DownHeaderPhoto />
-  <HomeAbout />
-  <!-- <HomeMainVideo /> -->
-  <GalleryPreview />
-  <Partycipants ref=participants />
-  <PlaceYMap />
-  <Contacts ref=contacts />
+<DownHeaderPhoto />
+<HomeAbout />
+<!-- <HomeMainVideo /> -->
+<GalleryPreview />
+<Partycipants ref=participants />
+<PlaceYMap />
+<Contacts ref=contacts />
 </template>
 
 <script lang="ts">

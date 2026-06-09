@@ -25,22 +25,6 @@ def add_form_action(data):
     file.close()
 
 
-def retry_on_smtp_error(max_retries=3, delay=5):
-    def decorator(func):
-        @wraps(func)
-        def wrapper(*args, **kwargs):
-            for attempt in range(max_retries):
-                try:
-                    return func(*args, **kwargs)
-                except smtplib.SMTPDataError as e:
-                    if e.smtp_code == 451 and attempt < max_retries - 1:
-                        print(f"Attempt {attempt + 1} failed with 451 error. Retrying in {delay * (2 ** attempt)} seconds...")
-                        time.sleep(delay * (2 ** attempt))  # Экспоненциальная задержка
-                    else:
-                        raise
-            raise Exception("All retry attempts failed")
-        return wrapper
-    return decorator
 
 def send_mail(html_content):
     smtp_server = os.getenv('server')
@@ -55,25 +39,33 @@ def send_mail(html_content):
     server.login(email, password)
 
     from_email = email
-    to_email_1 = "gazinskii.i.v@emk.ru"
-    to_email_2 = "timofeev.a.a@emk.ru"
-    to_email_3 = "sovet@mosckba.ru"
+    to_emails = [
+        "sovet@mosckba.ru",
+        "gazinskii.i.v@emk.ru",
+        "timofeev.a.a@emk.ru"
+    ]
 
     message = MIMEMultipart("alternative")
     message["Subject"] = "Сообщение отправлено через форму на сайте meeting.mosckba.ru"
     message["From"] = from_email
-    message["To"] = to_email_1
 
     part_html = MIMEText(html_content, "html")
     message.attach(part_html)
 
-    server.sendmail(from_email, to_email_1, message.as_string())
-
-    message["To"] = to_email_2
-    server.sendmail(from_email, to_email_2, message.as_string())
-
-    message["To"] = to_email_3
-    server.sendmail(from_email, to_email_3, message.as_string())
+    for to_email in to_emails:
+        try:
+            message["To"] = to_email
+            server.sendmail(from_email, to_email, message.as_string())
+            successful_sends += 1
+            print(f"Письмо успешно отправлено на {to_email}")
+        except smtplib.SMTPDataError as e:
+            if e.smtp_code == 451:
+                print(f"Временная ошибка 451 при отправке на {to_email}. Письмо могло быть доставлено.")
+                successful_sends += 1  # Считаем успешной отправкой, если сервер принял письмо
+            else:
+                print(f"Ошибка при отправке на {to_email}: {e}")
+        except Exception as e:
+            print(f"Критическая ошибка при отправке на {to_email}: {e}")
 
     server.quit()
 

@@ -25,12 +25,28 @@ def add_form_action(data):
     file.close()
 
 
+def retry_on_smtp_error(max_retries=3, delay=5):
+    def decorator(func):
+        @wraps(func)
+        def wrapper(*args, **kwargs):
+            for attempt in range(max_retries):
+                try:
+                    return func(*args, **kwargs)
+                except smtplib.SMTPDataError as e:
+                    if e.smtp_code == 451 and attempt < max_retries - 1:
+                        print(f"Attempt {attempt + 1} failed with 451 error. Retrying in {delay * (2 ** attempt)} seconds...")
+                        time.sleep(delay * (2 ** attempt))  # Экспоненциальная задержка
+                    else:
+                        raise
+            raise Exception("All retry attempts failed")
+        return wrapper
+    return decorator
 
 def send_mail(html_content):
     smtp_server = os.getenv('server')
-    # port = 587
+    port = 587
 
-    server = smtplib.SMTP(smtp_server)#, port)
+    server = smtplib.SMTP(smtp_server, port)
     server.starttls()
 
     email = "it.dpm@emk.ru"

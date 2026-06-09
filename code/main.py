@@ -28,9 +28,9 @@ def add_form_action(data):
 
 def send_mail(html_content):
     smtp_server = os.getenv('server')
-    port = 587
+    # port = 587
 
-    server = smtplib.SMTP(smtp_server, port)
+    server = smtplib.SMTP(smtp_server)#, port)
     server.starttls()
 
     email = "it.dpm@emk.ru"

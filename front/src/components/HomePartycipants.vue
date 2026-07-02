@@ -1,9 +1,39 @@
 <template>
+    <div class="partycipants-2026__wrapper p-2 sm:p-4 w-full max-w-7xl mx-auto my-6 sm:my-8">
+        <div
+             class="partycipants-preview__title text-xl sm:text-2xl md:text-3xl text-center font-bold text-theme-black mb-4 sm:mb-6">
+            Участники слета 2026
+        </div>
+        <div class="overflow-x-auto rounded-md border border-gray-100 shadow-md">
+            <table class="w-full min-w-[640px] table-auto bg-white text-left text-theme-grey-blue">
+                <thead class="bg-theme-blue-dark text-white">
+                    <tr>
+                        <th scope="col"
+                            class="w-16 px-4 py-3 text-sm sm:text-base font-semibold">№</th>
+                        <th scope="col"
+                            class="px-4 py-3 text-sm sm:text-base font-semibold">Организация</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="(participant, index) in companies"
+                        :key="participant + index"
+                        class="border-b border-gray-100 last:border-b-0 odd:bg-white even:bg-gray-50">
+                        <td class="px-4 py-3 align-top text-sm sm:text-base font-medium text-theme-blue-dark">
+                            {{ index + 1 }}
+                        </td>
+                        <td class="px-4 py-3 align-top text-sm sm:text-base">
+                            {{ participant }}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
     <div v-if="visibleLogos"
          class="partycipants-preview__wrapper p-2 sm:p-4 w-full max-w-7xl  mx-auto">
         <div
              class="partycipants-preview__title text-xl sm:text-2xl md:text-3xl  text-center font-bold text-theme-black mb-2 sm:mb-4">
-            В наших мероприятиях приняли участие Компании:
+            В наших мероприятиях принимали участие Компании:
         </div>
         <transition-group name="logo-list"
                           tag="div"
@@ -31,7 +61,8 @@
 
 <script lang="ts">
 import { defineComponent, ref, onMounted, watch } from 'vue';
-import { page } from '@/assets/data';
+import { companies } from '@/assets/companies';
+
 export default defineComponent({
     name: 'PartycipantsBlock',
     setup() {
@@ -60,7 +91,8 @@ export default defineComponent({
         return {
             logos,
             showAll,
-            visibleLogos
+            visibleLogos,
+            companies
         }
     }
 })

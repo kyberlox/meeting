@@ -1,4 +1,5 @@
 <template>
+    <div class="partycipants-block">
     <div class="partycipants-2026__wrapper p-2 sm:p-4 w-full max-w-7xl mx-auto my-6 sm:my-8">
         <div
              class="partycipants-preview__title text-xl sm:text-2xl md:text-3xl text-center font-bold text-theme-black mb-4 sm:mb-6">
@@ -22,7 +23,7 @@
                             {{ index + 1 }}
                         </td>
                         <td class="px-4 py-3 align-top text-sm sm:text-base">
-                            {{ participant }}
+                            {{ participant.toUpperCase() }}
                         </td>
                     </tr>
                 </tbody>
@@ -56,6 +57,7 @@
                 Показать все
             </button>
         </div>
+    </div>
     </div>
 </template>
 

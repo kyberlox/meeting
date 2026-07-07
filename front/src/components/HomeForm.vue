@@ -4,7 +4,7 @@
             <div class="form-input"
                  v-for="item in form"
                  :key="item.id"
-                 :class="{ 'col-span-2': item.name == 'fio' || item.name == 'msg' || item.name == 'email' || item.name == 'report' }">
+                 :class="{ 'col-span-2': item.name == 'fio' || item.name == 'msg' || item.name == 'email' || item.type == 'checkbox' }">
                 <label class="block text-gray-700 text-md font-medium"
                        :class="{ 'mb-2': item.type !== 'checkbox', 'flex flex-row-reverse items-center gap-[6px] justify-end cursor-pointer': item.type == 'checkbox' }">{{
                         item.title }}
@@ -82,7 +82,7 @@ export default defineComponent({
                     // required: helpers.withMessage('Организация обязательна для заполнения', required)
                 },
                 msg: {
-                    // 
+                    //
                 },
                 report: {
 
@@ -94,7 +94,7 @@ export default defineComponent({
 
         const setData = (name: string, value: string | boolean) => {
             formResults.value[name] = value;
-            v$.value.formResults[name].$touch();
+            v$.value.formResults[name]?.$touch();
         };
 
         const submitForm = async () => {
@@ -109,17 +109,59 @@ export default defineComponent({
         };
 
         const sendEmail = () => {
-            fetch('/api/send_form', {
-                method: 'POST',
-                body: JSON.stringify(formResults.value),
-                headers: {
-                    'Content-Type': 'application/json'
+            const checkboxResults = [
+                formResults.value.report ? 'С докладом: да' : '',
+                formResults.value.gagarin ? 'Экскурсия на место приземления Гагарина: да' : '',
+                formResults.value.uptk ? 'Экскурсия на УПТК: да' : '',
+            ].filter(Boolean).join('\n');
+            const description = `${formResults.value.msg || ''}\n${checkboxResults}`.trim();
+            const payload: Record<string, string> = {};
+            const originalPayload: IForm = {
+                fio: formResults.value.fio || '',
+                phone: formResults.value.phone || '',
+                email: formResults.value.email || '',
+                organization: formResults.value.organization || '',
+                report: Boolean(formResults.value.report),
+                gagarin: Boolean(formResults.value.gagarin),
+                uptk: Boolean(formResults.value.uptk),
+                msg: description,
+            };
+
+            if (formResults.value.fio) payload.full_name = formResults.value.fio;
+            if (formResults.value.email) payload.email = formResults.value.email;
+            if (formResults.value.phone) payload.phone_number = formResults.value.phone;
+            if (formResults.value.organization) payload.title = formResults.value.organization;
+            payload.city = "";
+            payload.position = "";
+            if (description) payload.description = description;
+
+            Promise.all([
+                fetch('/api/send_form', {
+                    method: 'POST',
+                    body: JSON.stringify(originalPayload),
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                }),
+                fetch('https://exhibitions.emk.ru/api/contacts/', {
+                    method: 'POST',
+                    body: JSON.stringify(payload),
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+            ]).then(([localResponse, contactsResponse]) => {
+                if (!localResponse.ok || !contactsResponse.ok) {
+                    throw new Error(`Request failed with status ${localResponse.status}/${contactsResponse.status}`);
                 }
-            }).then(response => response.json())
-                .then(data => {
-                    if (data == true) {
-                        toast.success('Сообщение успещно отправлено!')
-                    };
+
+                return Promise.all([
+                    localResponse.json().catch(() => null),
+                    contactsResponse.json().catch(() => null)
+                ]);
+            })
+                .then(() => {
+                    toast.success('Сообщение успещно отправлено!')
                     loading.value = false;
                 })
                 .catch(error => {

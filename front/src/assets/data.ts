@@ -179,6 +179,18 @@ export const page = {
         name: 'report',
         type: 'checkbox'
     },
+    {
+      id:7,
+      title: 'Экскурсия на место приземления Гагарина',
+      name:'gagarin',
+      type:'checkbox'
+    },
+        {
+      id:8,
+      title: 'Экскурсия на УПТК',
+      name:'uptk',
+      type:'checkbox'
+    }
     ]
 }
 

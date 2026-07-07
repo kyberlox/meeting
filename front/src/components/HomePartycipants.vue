@@ -3,7 +3,7 @@
     <div class="partycipants-2026__wrapper p-2 sm:p-4 w-full max-w-7xl mx-auto my-6 sm:my-8">
         <div
              class="partycipants-preview__title text-xl sm:text-2xl md:text-3xl text-center font-bold text-theme-black mb-4 sm:mb-6">
-            Участники слета 2026
+            Участники 2026
         </div>
         <div class="overflow-x-auto rounded-md border border-gray-100 shadow-md">
             <table class="w-full min-w-[640px] table-auto bg-white text-left text-theme-grey-blue">

@@ -143,7 +143,7 @@ export default defineComponent({
                         'Content-Type': 'application/json'
                     }
                 }),
-                fetch('https://exhibitions.emk.ru/api/contacts/', {
+                fetch('https://exhibitions.emk.ru/api/contacts?id=3', {
                     method: 'POST',
                     body: JSON.stringify(payload),
                     headers: {

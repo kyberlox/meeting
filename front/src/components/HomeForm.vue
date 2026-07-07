@@ -115,7 +115,7 @@ export default defineComponent({
                 formResults.value.uptk ? 'Экскурсия на УПТК: да' : '',
             ].filter(Boolean).join('\n');
             const description = `${formResults.value.msg || ''}\n${checkboxResults}`.trim();
-            const payload: Record<string, string> = {};
+            const payload: Record<string, string | number> = {};
             const originalPayload: IForm = {
                 fio: formResults.value.fio || '',
                 phone: formResults.value.phone || '',
@@ -131,6 +131,7 @@ export default defineComponent({
             if (formResults.value.email) payload.email = formResults.value.email;
             if (formResults.value.phone) payload.phone_number = formResults.value.phone;
             if (formResults.value.organization) payload.title = formResults.value.organization;
+            payload.exhibition_id=3;
             payload.city = "";
             payload.position = "";
             if (description) payload.description = description;
@@ -143,7 +144,7 @@ export default defineComponent({
                         'Content-Type': 'application/json'
                     }
                 }),
-                fetch('https://exhibitions.emk.ru/api/contacts?id=3', {
+                fetch('https://exhibitions.emk.ru/api/contacts', {
                     method: 'POST',
                     body: JSON.stringify(payload),
                     headers: {

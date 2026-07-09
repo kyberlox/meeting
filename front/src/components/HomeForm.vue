@@ -122,8 +122,8 @@ export default defineComponent({
                 email: formResults.value.email || '',
                 organization: formResults.value.organization || '',
                 report: Boolean(formResults.value.report),
-                gagarin: Boolean(formResults.value.gagarin),
-                uptk: Boolean(formResults.value.uptk),
+                // gagarin: Boolean(formResults.value.gagarin),
+                // uptk: Boolean(formResults.value.uptk),
                 msg: description,
             };
 
